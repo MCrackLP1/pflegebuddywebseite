@@ -25,7 +25,7 @@ function Model() {
               child.material.envMapIntensity = 2.5;
               if (child.material.color) {
                 const color = child.material.color;
-                const hsl = {};
+                const hsl: { h: number; s: number; l: number } = { h: 0, s: 0, l: 0 };
                 color.getHSL(hsl);
                 color.setHSL(hsl.h, Math.min(hsl.s * 1.4, 1.0), hsl.l);
               }
