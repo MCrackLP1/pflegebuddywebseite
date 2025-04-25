@@ -6,9 +6,15 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import Footer from "./components/Footer";
 import { blogPosts as pflegeBlogPosts } from "./blog/blogPosts";
 import dynamic from 'next/dynamic';
-import HomeContent from './components/HomeContent';
+// import HomeContent from './components/HomeContent'; // Remove direct import
 import PflegeQuiz from './components/PflegeQuiz';
 import FAQAccordion from './components/FAQAccordion';
+
+// Dynamically import HomeContent without SSR
+const HomeContent = dynamic(() => import('./components/HomeContent'), { 
+  ssr: false,
+  loading: () => <div className="min-h-screen flex items-center justify-center"><p>Lade Inhalte...</p></div> // Optional loading state
+});
 
 const features = [
   {
