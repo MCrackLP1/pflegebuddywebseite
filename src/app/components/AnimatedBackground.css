@@ -1,0 +1,42 @@
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+.blob {
+  position: absolute;
+  width: 40vw;
+  min-width: 300px;
+  max-width: 600px;
+  height: auto;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.blob1 {
+  top: -10%;
+  left: -10%;
+  animation: blobMove1 18s ease-in-out infinite alternate;
+}
+
+.blob2 {
+  bottom: -15%;
+  right: -10%;
+  animation: blobMove2 22s ease-in-out infinite alternate;
+}
+
+@keyframes blobMove1 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, 60px) scale(1.08); }
+}
+
+@keyframes blobMove2 {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-60px, -40px) scale(0.95); }
+} 
