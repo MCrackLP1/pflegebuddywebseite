@@ -3,8 +3,17 @@ import React from 'react';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import type { BlogPost } from '../blogPosts';
 
-export default function BlogPostClientContent({ post, related, shareUrl, shareText, readingTime }) {
+interface BlogPostClientContentProps {
+  post: BlogPost;
+  related: BlogPost[];
+  shareUrl: string;
+  shareText: string;
+  readingTime: number;
+}
+
+export default function BlogPostClientContent({ post, related, shareUrl, shareText, readingTime }: BlogPostClientContentProps) {
   return (
     <>
       <article className="max-w-3xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-16 backdrop-blur">
