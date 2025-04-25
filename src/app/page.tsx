@@ -10,7 +10,7 @@ import FeedbackButton from "./components/FeedbackButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Footer from "./components/Footer";
 import { blogPosts as pflegeBlogPosts } from "./blog/blogPosts";
-import dynamic from 'next/dynamic';
+import ThreeScene from './components/ThreeComponents';
 
 const features = [
   {
@@ -301,8 +301,6 @@ function PflegeQuiz() {
     </div>
   );
 }
-
-const ThreeScene = dynamic(() => import('./components/ThreeComponents'), { ssr: false });
 
 export default function Home() {
   return (
