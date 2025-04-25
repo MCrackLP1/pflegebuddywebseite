@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaRegFileAlt, FaRegLightbulb, FaRegChartBar, FaRegComments, FaRegCalendarAlt } from "react-icons/fa";
 import FeedbackButton from "./components/FeedbackButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer"; // Remove Footer import
 import { blogPosts as pflegeBlogPosts } from "./blog/blogPosts";
 import dynamic from 'next/dynamic';
 // import HomeContent from './components/HomeContent'; // Remove direct import
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */ /* Remove Footer usage */}
     </main>
   );
 }
