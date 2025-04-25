@@ -49,7 +49,7 @@ function Model() {
         ref={modelRef}
         object={scene} 
         scale={4}
-        position={[0.7, 0.2, 0]}
+        position={[0, 0.2, 0]}
         rotation={[-Math.PI * 0.08, 0, Math.PI]}
       />
     );
@@ -93,7 +93,7 @@ export default function ThreeScene() {
   }
 
   return (
-    <div className="w-full h-[600px] relative">
+    <div className="w-full h-[320px] sm:h-[400px] md:h-[600px] relative mx-auto">
       <Canvas
         camera={{ 
           position: [1, 0, 6],
