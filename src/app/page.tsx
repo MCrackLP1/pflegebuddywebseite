@@ -10,7 +10,7 @@ import FeedbackButton from "./components/FeedbackButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Footer from "./components/Footer";
 import { blogPosts as pflegeBlogPosts } from "./blog/blogPosts";
-import ThreeScene from './components/ThreeComponents';
+import dynamic from 'next/dynamic';
 
 const features = [
   {
@@ -302,6 +302,8 @@ function PflegeQuiz() {
   );
 }
 
+const ThreeSceneClient = dynamic(() => import('./components/ThreeSceneClient'), { ssr: false });
+
 export default function Home() {
   return (
     <main className="bg-[#23243a] text-[#f3f6fa] font-sans">
@@ -362,7 +364,7 @@ export default function Home() {
               transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
             >
               <Suspense fallback={<div className="text-[#30b9c9]">Lädt 3D...</div>}>
-                <ThreeScene />
+                <ThreeSceneClient />
               </Suspense>
             </motion.div>
           </div>
