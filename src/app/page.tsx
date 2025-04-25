@@ -351,7 +351,9 @@ export default function Home() {
               <div className="flex gap-4 items-center justify-center mt-2">
                 <span className="text-xs text-[#e0e6ed]">Auch als App:</span>
                 <FaApple size={28} className="hover:scale-110 transition-transform cursor-pointer" />
-                <FaGooglePlay size={28} className="hover:scale-110 transition-transform cursor-pointer" />
+                <a href="https://pflegebuddy.carrd.co" target="_blank" rel="noopener noreferrer" aria-label="Google Play Store">
+                  <FaGooglePlay size={28} className="hover:scale-110 transition-transform cursor-pointer" />
+                </a>
               </div>
             </div>
           </motion.div>

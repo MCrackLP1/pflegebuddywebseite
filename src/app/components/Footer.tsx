@@ -39,7 +39,7 @@ export default function Footer() {
           <h4 className="font-semibold text-[#30b9c9] mt-4">Jetzt herunterladen</h4>
           <div className="flex gap-3 mt-2">
             <a href="#" aria-label="Apple App Store (bald verfügbar)" className="hover:text-[#30b9c9] transition"><FaApple size={28} /></a>
-            <a href="#" aria-label="Google Play Store (bald verfügbar)" className="hover:text-[#30b9c9] transition"><FaGooglePlay size={28} /></a>
+            <a href="https://pflegebuddy.carrd.co" target="_blank" rel="noopener noreferrer" aria-label="Google Play Store"><FaGooglePlay size={28} /></a>
           </div>
         </div>
       </div>
