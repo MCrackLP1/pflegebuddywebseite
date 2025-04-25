@@ -1,7 +1,7 @@
 "use client";
 // app/page.tsx (Next.js 13+ mit App Router)
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaApple, FaGooglePlay, FaRegCalendarAlt, FaRegComments, FaRegFileAlt, FaRegLightbulb, FaRegChartBar, FaBoxOpen, FaUtensils, FaGavel, FaRegUser, FaRegSmile, FaRegMeh } from "react-icons/fa";
@@ -11,6 +11,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import SplinePhone from './components/SplinePhone';
 import Footer from "./components/Footer";
 import { blogPosts as pflegeBlogPosts } from "./blog/blogPosts";
+import dynamic from 'next/dynamic';
 
 const features = [
   {
@@ -302,6 +303,8 @@ function PflegeQuiz() {
   );
 }
 
+const ThreeScene = dynamic(() => import('./components/ThreeComponents'), { ssr: false });
+
 export default function Home() {
   return (
     <main className="bg-[#23243a] text-[#f3f6fa] font-sans">
@@ -358,7 +361,9 @@ export default function Home() {
             animate={{ y: [0, -16, 0, 16, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           >
-            <SplinePhone />
+            <Suspense fallback={<div className="text-[#30b9c9]">Lädt 3D...</div>}>
+              <ThreeScene />
+            </Suspense>
           </motion.div>
         </div>
       </div>
