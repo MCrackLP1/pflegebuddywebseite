@@ -129,7 +129,6 @@ export default function ThreeScene() {
             preset="city" 
             background={false} 
             blur={0.4}
-            intensity={1.2}
           />
           <AccumulativeShadows
             temporal
