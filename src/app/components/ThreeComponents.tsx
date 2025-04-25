@@ -106,7 +106,6 @@ export default function ThreeScene() {
           antialias: true,
           toneMapping: THREE.ACESFilmicToneMapping,
           toneMappingExposure: 0.9,
-          outputEncoding: THREE.sRGBEncoding,
           preserveDrawingBuffer: true,
           powerPreference: "high-performance",
         }}
