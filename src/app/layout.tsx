@@ -49,10 +49,19 @@ export default function RootLayout({
     <html lang="de">
       <head />
       <body className={`${inter.variable} font-sans antialiased`}>
-        <AnimatedBackground />
+        {/* Hide on mobile, show from medium screens up */}
+        <div className="hidden md:block">
+          <AnimatedBackground />
+        </div>
         <Navbar />
-        <StickyContactButtons />
-        <FeedbackButton />
+        {/* Hide on mobile, show from medium screens up */}
+        <div className="hidden md:block">
+          <StickyContactButtons />
+        </div>
+        {/* Hide on mobile, show from medium screens up */}
+        <div className="hidden md:block">
+          <FeedbackButton />
+        </div>
         <ScrollToTopButton />
         {children}
         <Footer />

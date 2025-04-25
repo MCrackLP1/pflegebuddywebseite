@@ -23,7 +23,7 @@ export default function HomeContent({ features }: HomeContentProps) {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative min-h-[65vh] flex items-center justify-center px-2 sm:px-4 py-12 sm:py-16 md:py-20 overflow-hidden">
+      <div className="relative min-h-[65vh] flex items-center justify-center px-2 sm:px-4 pt-24 pb-12 sm:py-16 md:py-20 overflow-hidden">
         <Image 
           src="/Headersectionbg.jpg" 
           alt="Pflegebuddy Header Hintergrund" 
