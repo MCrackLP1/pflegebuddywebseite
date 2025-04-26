@@ -48,6 +48,8 @@ export default function Footer() {
         <div className="flex gap-4">
           <a href="/datenschutz" className="hover:text-[#30b9c9] transition">Datenschutz</a>
           <a href="/impressum" className="hover:text-[#30b9c9] transition">Impressum</a>
+          <a href="/haftungsausschluss" className="hover:text-[#30b9c9] transition">Haftungsausschluss</a>
+          <a href="/agb" className="hover:text-[#30b9c9] transition">AGB</a>
         </div>
       </div>
     </footer>

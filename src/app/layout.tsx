@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import StickyContactButtons from "./components/StickyContactButtons";
 import FeedbackButton from "./components/FeedbackButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import CookieConsent from "./components/CookieConsent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     description: "Pflegebuddy unterstützt dich im Pflegealltag: Pflegegradrechner, Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
-    url: "https://pflegebuddy.de/",
+    url: "https://pflegebuddy.care/",
     siteName: "Pflegebuddy",
     images: [
       {
@@ -65,6 +66,7 @@ export default function RootLayout({
         <ScrollToTopButton />
         {children}
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

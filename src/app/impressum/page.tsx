@@ -12,7 +12,7 @@ export default function Impressum() {
           <section>
             <h2 className="text-xl font-semibold text-[#30b9c9] mb-3">Angaben gemäß § 5 TMG</h2>
             <p>
-              Mark Tietz & Tim Werner GbR<br />
+              Mark Tietz & Tim Werner<br />
               Königplatz 3<br />
               87448 Waltenhofen<br />
               Deutschland
@@ -23,7 +23,8 @@ export default function Impressum() {
             <h2 className="text-xl font-semibold text-[#30b9c9] mb-3">Kontakt</h2>
             <p>
               Telefon: 0174 1632129<br />
-              E-Mail: deinpflegebuddy@gmail.com
+              E-Mail: deinpflegebuddy@gmail.com<br />
+              Website: <a href="https://pflegebuddy.care" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">https://pflegebuddy.care</a>
             </p>
           </section>
 
@@ -39,7 +40,7 @@ export default function Impressum() {
             <h2 className="text-xl font-semibold text-[#30b9c9] mb-3">Umsatzsteuer-ID</h2>
             <p>
               Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-              [Wird nach Gründung ergänzt]
+              Derzeit nicht umsatzsteuerpflichtig nach § 19 UStG (Kleinunternehmerregelung)
             </p>
           </section>
 
@@ -117,6 +118,12 @@ export default function Impressum() {
               beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine 
               Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden 
               von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+            </p>
+          </section>
+          
+          <section className="mt-8 pt-4 border-t border-[#30b9c9]/30">
+            <p className="text-sm italic">
+              Stand: {new Date().toLocaleDateString('de-DE')}
             </p>
           </section>
         </div>

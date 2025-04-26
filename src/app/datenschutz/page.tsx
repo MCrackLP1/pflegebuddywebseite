@@ -38,7 +38,16 @@ export default function Datenschutz() {
             <h4 className="font-medium mb-1">Wofür nutzen wir Ihre Daten?</h4>
             <p className="mb-4">
               Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können 
-              zur Analyse Ihres Nutzerverhaltens verwendet werden.
+              zur Analyse Ihres Nutzerverhaltens verwendet werden, jedoch nur nach Ihrer ausdrücklichen Einwilligung.
+            </p>
+
+            <h4 className="font-medium mb-1">Welche Rechte haben Sie bezüglich Ihrer Daten?</h4>
+            <p className="mb-4">
+              Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen 
+              Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine 
+              Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung jederzeit widerrufen. Außerdem haben 
+              Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+              Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
             </p>
           </section>
 
@@ -50,8 +59,16 @@ export default function Datenschutz() {
             <h3 className="text-lg font-medium my-2 text-[#30b9c9]">Vercel</h3>
             <p>
               Anbieter ist die Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. Details entnehmen Sie der 
-              Datenschutzerklärung von Vercel: <a href="https://vercel.com/legal/privacy-policy" className="text-[#30b9c9] underline font-semibold">
+              Datenschutzerklärung von Vercel: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">
               https://vercel.com/legal/privacy-policy</a>
+            </p>
+            <p className="mt-2">
+              Die Verwendung von Vercel erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst 
+              zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich
+              auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung ist jederzeit widerrufbar.
+            </p>
+            <p className="mt-2">
+              Der Datenübertragung in die USA liegt ein Angemessenheitsbeschluss der Europäischen Kommission, die "EU-US Data Privacy Framework" (EU-US DPF) zugrunde.
             </p>
           </section>
 
@@ -72,7 +89,36 @@ export default function Datenschutz() {
               Königplatz 3<br />
               87448 Waltenhofen<br />
               Deutschland<br /><br />
-              E-Mail: deinpflegebuddy@gmail.com
+              E-Mail: deinpflegebuddy@gmail.com<br />
+              Website: <a href="https://pflegebuddy.care" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">https://pflegebuddy.care</a>
+            </p>
+
+            <p className="mb-4">
+              Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und 
+              Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
+            </p>
+          </section>
+
+          <section>
+            <h3 className="text-lg font-medium mb-2">Speicherdauer</h3>
+            <p className="mb-4">
+              Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen 
+              Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder 
+              eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen 
+              Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z.B. steuer- oder handelsrechtliche Aufbewahrungsfristen); 
+              im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.
+            </p>
+          </section>
+
+          <section>
+            <h3 className="text-lg font-medium mb-2">Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung</h3>
+            <p className="mb-4">
+              Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 
+              Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere Datenkategorien verarbeitet werden. Im Falle einer 
+              ausdrücklichen Einwilligung in die Übertragung personenbezogener Daten in Drittstaaten erfolgt die Datenverarbeitung außerdem 
+              auf Grundlage von Art. 49 Abs. 1 lit. a DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen 
+              in Ihr Endgerät (z.B. via Device-Fingerprinting) eingewilligt haben, erfolgt die Datenverarbeitung zusätzlich auf Grundlage 
+              von § 25 Abs. 1 TTDSG. Die Einwilligung ist jederzeit widerrufbar.
             </p>
           </section>
 
@@ -85,11 +131,22 @@ export default function Datenschutz() {
               inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von 
               Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
             </p>
+            <p className="mb-4">
+              Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines
+              Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die 
+              Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO)
+              oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.
+            </p>
 
             <h3 className="text-lg font-medium mb-2">Cookies</h3>
+            <p className="mb-4">
+              Unsere Website verwendet nur technisch notwendige Cookies. Technisch notwendige Cookies werden gesetzt, um die Grundfunktionen
+              der Website zu gewährleisten.
+            </p>
             <p>
-              Unsere Website verwendet keine Tracking-Cookies. Lediglich technisch notwendige Cookies für die Funktionalität 
-              der Website können gesetzt werden.
+              Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Der Websitebetreiber hat ein 
+              berechtigtes Interesse an der Speicherung von technisch notwendigen Cookies zur technisch fehlerfreien und optimierten Bereitstellung 
+              seiner Dienste.
             </p>
           </section>
 
@@ -100,14 +157,30 @@ export default function Datenschutz() {
               personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten 
               zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese Einwilligung 
               jederzeit für die Zukunft widerrufen. Außerdem haben Sie das Recht, unter bestimmten Umständen die Einschränkung 
-              der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
+              der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein Beschwerderecht bei der 
+              zuständigen Aufsichtsbehörde zu.
+            </p>
+            <p className="mb-4">
+              Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit an uns wenden.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-[#30b9c9] mb-3">6. Stand und Änderungen dieser Datenschutzerklärung</h2>
+            <h2 className="text-xl font-semibold text-[#30b9c9] mb-3">6. Datenübermittlung und Drittländer</h2>
+            <p className="mb-4">
+              Diese Website kann Inhalte und Dienste von Drittanbietern einbinden, die ihren Sitz in Staaten außerhalb der Europäischen Union 
+              (EU) bzw. des Europäischen Wirtschaftsraums (EWR) haben. Beim Besuch dieser Website können Ihre Daten in diese Drittländer 
+              übertragen werden, in denen möglicherweise ein geringeres Datenschutzniveau als in der EU bzw. im EWR besteht. Sofern keine 
+              ausdrückliche Einwilligung für die Datenübermittlung in Drittländer vorliegt oder ein sonstiger Erlaubnistatbestand erfüllt 
+              ist, werden wir sicherstellen, dass für die Datenübermittlung in diese Länder angemessene Garantien bestehen. Das können etwa 
+              EU-Standarddatenschutzklauseln, anerkannte Verhaltensregeln oder Zertifizierungsmechanismen sein.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-[#30b9c9] mb-3">7. Stand und Änderungen dieser Datenschutzerklärung</h2>
             <p>
-              Diese Datenschutzerklärung hat den Stand: Januar 2024. Wir behalten uns vor, diese Datenschutzerklärung 
+              Diese Datenschutzerklärung hat den Stand: {new Date().toLocaleDateString('de-DE')}. Wir behalten uns vor, diese Datenschutzerklärung 
               anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer 
               Leistungen in der Datenschutzerklärung umzusetzen.
             </p>
