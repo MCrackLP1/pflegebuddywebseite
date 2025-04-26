@@ -15,7 +15,7 @@ export default function Footer() {
           <ul className="mt-2 space-y-1">
             <li><a href="/ueber-uns" className="hover:text-[#30b9c9] transition">Über uns</a></li>
             <li><a href="/blog" className="hover:text-[#30b9c9] transition">Blog</a></li>
-            <li><a href="#faq" className="hover:text-[#30b9c9] transition">FAQ</a></li>
+            <li><a href="/#faq" className="hover:text-[#30b9c9] transition">FAQ</a></li>
             <li><a href="/kontakt" className="hover:text-[#30b9c9] transition">Kontakt</a></li>
           </ul>
         </nav>
