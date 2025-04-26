@@ -16,7 +16,7 @@ const translations = {
     address: "Königplatz 3, Waltenhofen",
     team: "Mark Tietz & Tim Werner",
     emailContact: "deinpflegebuddy@gmail.com",
-    instagram: "Instagram: @pflegebuddy_app"
+    instagram: "Instagram: @pflege.buddy"
   },
   en: {
     title: "Contact Us",
@@ -31,7 +31,7 @@ const translations = {
     address: "Königplatz 3, Waltenhofen",
     team: "Mark Tietz & Tim Werner",
     emailContact: "deinpflegebuddy@gmail.com",
-    instagram: "Instagram: @pflegebuddy_app"
+    instagram: "Instagram: @pflege.buddy"
   }
 };
 
@@ -149,7 +149,7 @@ export default function Kontakt() {
             <li>👤 {t.team}</li>
             <li>📧 <a href="mailto:deinpflegebuddy@gmail.com" className="text-[#30b9c9] underline font-semibold">{t.emailContact}</a></li>
             <li>📍 {t.address}</li>
-            <li>📲 <a href="https://instagram.com/pflegebuddy_app" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">{t.instagram}</a></li>
+            <li>📲 <a href="https://www.instagram.com/pflege.buddy/" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">{t.instagram}</a></li>
           </ul>
         </div>
       </section>
