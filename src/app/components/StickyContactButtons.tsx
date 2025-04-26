@@ -1,12 +1,11 @@
 import { Phone, Mail } from "lucide-react";
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const contacts = [
   { icon: <Phone size={20} />, label: "Anrufen", href: "tel:01741632129", color: "bg-[#30b9c9]" },
   { icon: <Mail size={20} />, label: "Mail", href: "mailto:deinpflegebuddy@gmail.com", color: "bg-[#4dd0e1]" },
 ];
 const socials = [
-  { icon: <FaFacebook size={20} />, label: "Facebook", href: "https://facebook.com", color: "bg-[#1877f3]" },
   { icon: <FaInstagram size={20} />, label: "Instagram", href: "https://www.instagram.com/pflege.buddy/", color: "bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500" },
   { icon: <FaWhatsapp size={20} />, label: "WhatsApp", href: "https://wa.me/message/WK67K2T7SZCYH1", color: "bg-[#25d366]" },
 ];
