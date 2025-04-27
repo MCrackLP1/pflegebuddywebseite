@@ -1,0 +1,24 @@
+# robots.txt für pflegebuddy.care
+User-agent: *
+Allow: /
+Sitemap: https://pflegebuddy.care/sitemap.xml
+Sitemap: https://pflegebuddy.care/blog/sitemap.xml
+
+# Gruppenspezifische Regeln
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+User-agent: Slurp
+Allow: /
+Disallow: /api/
+
+# Crawl-Verzögerung
+Crawl-delay: 1 

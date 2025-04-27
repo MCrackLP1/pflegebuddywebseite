@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from "next";
 
 export default function Datenschutz() {
   return (
@@ -189,4 +188,13 @@ export default function Datenschutz() {
       </section>
     </main>
   );
-} 
+}
+
+export const metadata: Metadata = {
+  title: "Datenschutz – Pflegebuddy | Datenschutzerklärung & DSGVO",
+  description: "Wie schützt Pflegebuddy deine Daten? Alle Infos zu DSGVO, Nutzerrechten, Datensicherheit und Kontaktmöglichkeiten auf einen Blick.",
+  keywords: ["Datenschutz", "DSGVO", "Pflegebuddy", "Datenverarbeitung", "Nutzerrechte", "Datensicherheit", "Datenschutzerklärung"],
+  alternates: {
+    canonical: "https://pflegebuddy.care/datenschutz",
+  },
+}; 

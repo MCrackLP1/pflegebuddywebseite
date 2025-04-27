@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+import type { Metadata } from "next";
 
 export default function Impressum() {
   return (
@@ -130,4 +129,13 @@ export default function Impressum() {
       </section>
     </main>
   );
-} 
+}
+
+export const metadata: Metadata = {
+  title: "Impressum – Pflegebuddy | Anbieterkennzeichnung & Kontakt",
+  description: "Impressum der Pflegebuddy: Anbieterkennzeichnung, Kontakt, Verantwortliche, rechtliche Hinweise nach § 5 TMG und DSGVO. Transparenz & Erreichbarkeit auf einen Blick.",
+  keywords: ["Impressum", "Pflegebuddy", "Anbieterkennzeichnung", "Kontakt", "Rechtliche Hinweise", "TMG", "DSGVO", "Transparenz"],
+  alternates: {
+    canonical: "https://pflegebuddy.care/impressum",
+  },
+}; 

@@ -8,6 +8,7 @@ import StickyContactButtons from "./components/StickyContactButtons";
 import FeedbackButton from "./components/FeedbackButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import CookieConsent from "./components/CookieConsent";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,11 +16,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
-  description: "Pflegebuddy unterstützt dich im Pflegealltag: Pflegegradrechner, Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
+  metadataBase: new URL('https://pflegebuddy.care'),
+  title: {
+    default: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
+    template: "%s | Pflegebuddy"
+  },
+  description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
+  keywords: ["Pflege", "Pflegehilfe", "Pflegeassistent", "Pflegeberatung", "digitale Pflegehilfe"],
+  authors: [{ name: "Pflegebuddy Team" }],
+  creator: "Pflegebuddy GmbH",
+  publisher: "Pflegebuddy GmbH",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
-    description: "Pflegebuddy unterstützt dich im Pflegealltag: Pflegegradrechner, Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
+    description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
     url: "https://pflegebuddy.care/",
     siteName: "Pflegebuddy",
     images: [
@@ -36,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
-    description: "Pflegebuddy unterstützt dich im Pflegealltag: Pflegegradrechner, Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
+    description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
     images: ["/og-image.jpg"]
   }
 };
@@ -48,7 +65,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <head />
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="Pflegebuddy Blog" href="/blog/rss.xml" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Pflegebuddy",
+              url: "https://pflegebuddy.care",
+              logo: "https://pflegebuddy.care/logo.png",
+              description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "",
+                contactType: "customer service",
+                email: "info@pflegebuddy.care"
+              },
+              sameAs: [
+                "https://www.facebook.com/pflegebuddy",
+                "https://www.instagram.com/pflegebuddy.app",
+                "https://www.linkedin.com/company/pflegebuddy"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {/* Hide on mobile, show from medium screens up */}
         <div className="hidden md:block">
@@ -64,7 +109,9 @@ export default function RootLayout({
           <FeedbackButton />
         </div>
         <ScrollToTopButton />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
         <CookieConsent />
       </body>

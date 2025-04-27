@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import type { Metadata } from "next";
 
 export default function UeberUns() {
   return (
@@ -93,10 +94,19 @@ export default function UeberUns() {
           <h3 className="text-xl font-bold text-[#30b9c9] mb-2">Kontakt & Social Media</h3>
           <ul className="list-inside text-[#f3f6fa] space-y-1">
             <li>📧 E-Mail: <a href="mailto:deinpflegebuddy@gmail.com" className="text-[#30b9c9] underline font-semibold">deinpflegebuddy@gmail.com</a></li>
-            <li>📲 Instagram: <a href="https://instagram.com/pflegebuddy_app" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">@pflegebuddy_app</a></li>
+            <li>📲 Instagram: <a href="https://www.instagram.com/pflege.buddy/" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">@pflege.buddy</a></li>
           </ul>
         </div>
       </section>
     </main>
   );
-} 
+}
+
+export const metadata: Metadata = {
+  title: "Über uns – Pflegebuddy | Team, Mission & Vision",
+  description: "Das Team hinter Pflegebuddy: Pflegeexperten Mark Tietz & Tim Werner. Unsere Mission: Digitale Tools für Pflegekräfte. Vision, Werte & Kontakt auf einen Blick.",
+  keywords: ["Über uns", "Pflegebuddy Team", "Mission", "Vision", "Pflegeexperten", "Digitale Pflege", "Kontakt", "Werte"],
+  alternates: {
+    canonical: "https://pflegebuddy.care/ueber-uns",
+  },
+}; 

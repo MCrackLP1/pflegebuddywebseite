@@ -2,7 +2,7 @@ import { blogPosts } from './blogPosts';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const baseUrl = 'https://pflegebuddy.de';
+  const baseUrl = 'https://pflegebuddy.care';
   const urls = [
     ...blogPosts.map(post => `${baseUrl}/blog/${post.slug}`),
     ...Array.from(new Set(blogPosts.map(post => `${baseUrl}/blog/autor/${post.author.authorId}`)))
