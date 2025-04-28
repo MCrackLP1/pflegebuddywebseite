@@ -21,8 +21,7 @@
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
     "sharp": "^0.34.1",
-    "three": "^0.159.0",
-    "three-mesh-bvh": "^0.8.0"
+    "three": "^0.159.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.2.28",
