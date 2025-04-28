@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
   {
     title: "Verpflichtende TI-Anbindung für Pflegeeinrichtungen ab 1. Juli 2025 – Was Sie wissen müssen",
     excerpt: "Ab 1. Juli 2025 sind alle Pflegeeinrichtungen verpflichtet, sich an die Telematikinfrastruktur (TI) anzubinden. Hier erfahren Sie alles zu gesetzlichen Vorgaben, Zeitplan, Technik, Nutzen und Herausforderungen.",
-    imageUrl: "/spline/ti-anbindung.jpg",
+    imageUrl: "/spline/ti-anbindung.webp",
     categories: ["Digitalisierung", "Pflege", "Gesetzgebung"],
     tags: ["TI", "Pflege", "Digital", "Gesetz"],
     slug: "ti-anbindung-pflege-2025",
@@ -116,7 +116,7 @@ So sichern Sie nicht nur die Einhaltung gesetzlicher Vorgaben, sondern schaffen 
 `,
     author: {
       name: "Mark Tietz",
-      avatarUrl: "/spline/author-mark.jpg",
+      avatarUrl: "/spline/author-mark.webp",
       authorId: "mark-tietz",
       bio: "Gründer von Pflegebuddy, Digitalisierungs-Enthusiast und Pflege-Optimist. Schreibt über Innovationen, Digitalisierung und Pflegepolitik."
     }
@@ -124,7 +124,7 @@ So sichern Sie nicht nur die Einhaltung gesetzlicher Vorgaben, sondern schaffen 
   {
     title: "Pflegekrise 2025 – Warum jetzt echte Reformen nötig sind",
     excerpt: "Kostenexplosion, Fachkräftemangel, Reformdruck: Was Pflegeeinrichtungen und Pflegende jetzt wissen müssen. Die Pflegeversicherung steht 2025 massiv unter Druck. Was kommt auf Einrichtungen und Pflegekräfte zu?",
-    imageUrl: "/spline/pflegekrise-2025.jpg", // Add this image or use a placeholder
+    imageUrl: "/spline/pflegekrise-2025.webp", // Add this image or use a placeholder
     categories: ["Pflege", "Gesetzgebung", "Digitalisierung"],
     tags: [
       "Pflege2025", "Pflegereform", "TIAnbindung", "PflegeDigital", "Pflegekosten", "KarlLauterbach", "Pflegeversicherung", "Pflegekrise", "Pflegebuddy"
@@ -205,15 +205,15 @@ Bleibe auf dem Laufenden zu aktuellen Reformen, Digitalstrategien und Fördermö
     `,
     author: {
       name: "Tim Werner",
-      avatarUrl: "/spline/author-tim.jpg",
+      avatarUrl: "/spline/author-tim.webp",
       authorId: "tim-werner",
       bio: "Pflegewissenschaftler, Co-Autor bei Pflegebuddy. Setzt sich für Reformen und digitale Lösungen in der Pflege ein."
     }
   },
   {
     title: "Roboter in der Pflege: Zwischen Technik, Menschlichkeit und Zukunftspotenzial",
-    excerpt: "Pflege-Roboter wie „Pepper“ revolutionieren den Alltag in Pflegeheimen. Erfahre hier, wie sie Pflegekräfte entlasten, Bewohner aktivieren – und was es bei Ethik & Datenschutz zu beachten gilt.",
-    imageUrl: "/spline/roboter-pflege.jpg",
+    excerpt: 'Pflege-Roboter wie "Pepper" revolutionieren den Alltag in Pflegeheimen. Erfahre hier, wie sie Pflegekräfte entlasten, Bewohner aktivieren – und was es bei Ethik & Datenschutz zu beachten gilt.',
+    imageUrl: "/spline/roboter-pflege.webp",
     categories: ["Digitalisierung", "Pflege", "Robotik", "Innovation"],
     tags: [
       "Pflegeroboter", "Pflege2025", "Robotik", "Pepper", "Digitalisierung", "Ethik", "Datenschutz", "Pflegeinnovation", "Pflegekräfte", "Pflegeheim"
@@ -224,7 +224,7 @@ Bleibe auf dem Laufenden zu aktuellen Reformen, Digitalstrategien und Fördermö
 # Roboter in der Pflege: Zwischen Technik, Menschlichkeit und Zukunftspotenzial
 
 **Meta-Titel:** Roboter in der Pflege 2025 – Chancen, Risiken & Zukunft | Pflegebuddy Blog  
-**Meta-Beschreibung:** Pflege-Roboter wie „Pepper“ revolutionieren den Alltag in Pflegeheimen. Erfahre hier, wie sie Pflegekräfte entlasten, Bewohner aktivieren – und was es bei Ethik & Datenschutz zu beachten gilt.
+**Meta-Beschreibung:** Pflege-Roboter wie "Pepper" revolutionieren den Alltag in Pflegeheimen. Erfahre hier, wie sie Pflegekräfte entlasten, Bewohner aktivieren – und was es bei Ethik & Datenschutz zu beachten gilt.
 
 ---
 
@@ -236,7 +236,7 @@ Der anhaltende Pflegenotstand stellt Pflegeeinrichtungen und Angehörige vor mas
 
 ## Pflege-Assistenzroboter: Von der Vision zur Realität
 
-Bereits heute sind Systeme wie der humanoide Roboter „Pepper“ in Pflegeeinrichtungen im Einsatz. Sie führen gymnastische Übungen mit Bewohnern durch, lesen Geschichten vor oder erinnern an die Medikamenteneinnahme. Das Ziel: Pflegepersonal entlasten und gleichzeitig das soziale Wohlbefinden der Pflegebedürftigen fördern.
+Bereits heute sind Systeme wie der humanoide Roboter "Pepper" in Pflegeeinrichtungen im Einsatz. Sie führen gymnastische Übungen mit Bewohnern durch, lesen Geschichten vor oder erinnern an die Medikamenteneinnahme. Das Ziel: Pflegepersonal entlasten und gleichzeitig das soziale Wohlbefinden der Pflegebedürftigen fördern.
 
 ---
 
@@ -298,11 +298,11 @@ Doch der Schlüssel zum Erfolg liegt in der Mensch-Technik-Balance: Nur mit Resp
 📌 **Mehr erfahren & Pflege digital denken:**
 Du willst wissen, wie digitale Tools Pflegeeinrichtungen wirklich helfen? Dann folge uns auf Instagram oder besuche regelmäßig unseren Blog hier auf pflegebuddy.care.
 
-![Roboter in der Pflege](/spline/roboter-pflege.jpg)
+![Roboter in der Pflege](/spline/roboter-pflege.webp)
 `,
     author: {
       name: "Mark Tietz",
-      avatarUrl: "/spline/author-mark.jpg",
+      avatarUrl: "/spline/author-mark.webp",
       authorId: "mark-tietz",
       bio: "Gründer von Pflegebuddy, Digitalisierungs-Enthusiast und Pflege-Optimist. Schreibt über Innovationen, Digitalisierung und Pflegepolitik."
     }
@@ -310,7 +310,7 @@ Du willst wissen, wie digitale Tools Pflegeeinrichtungen wirklich helfen? Dann f
   {
     title: "Karrierewege für Pflegekräfte nach der Ausbildung in Deutschland",
     excerpt: "Entdecke alle Karrierewege, Weiterbildungen und Gehaltschancen für Pflegekräfte nach der Ausbildung in Deutschland. Mit aktuellen Zahlen, Tipps und Studienoptionen – jetzt informieren und beruflich durchstarten!",
-    imageUrl: "/spline/karrierewege-pflege.jpg", // Platzhalter, bitte ggf. ersetzen
+    imageUrl: "/spline/karrierewege-pflege.webp", // Platzhalter, bitte ggf. ersetzen
     categories: ["Pflege", "Karriere", "Weiterbildung", "Studium", "Gehalt"],
     tags: [
       "Karriere Pflege", "Pflegeausbildung", "Pflegefachkraft", "Weiterbildung Pflege", "Pflegestudium", "Pflege Gehalt", "Pflegeberufe", "Pflege Deutschland", "Pflegekräfte 2025", "Pflegebuddy"
@@ -423,7 +423,7 @@ Die Pflege bietet dir nach der Ausbildung nicht nur einen sicheren Arbeitsplatz,
 `,
     author: {
       name: "Mark Tietz",
-      avatarUrl: "/spline/author-mark.jpg",
+      avatarUrl: "/spline/author-mark.webp",
       authorId: "mark-tietz",
       bio: "Gründer von Pflegebuddy, Digitalisierungs-Enthusiast und Pflege-Optimist. Schreibt über Innovationen, Digitalisierung und Pflegepolitik."
     }
@@ -431,7 +431,7 @@ Die Pflege bietet dir nach der Ausbildung nicht nur einen sicheren Arbeitsplatz,
   {
     title: "Revolution in der Pflege: Wie Künstliche Intelligenz (KI) und Health-Apps 2025 den Pflegealltag transformieren",
     excerpt: "Künstliche Intelligenz und Health-Apps revolutionieren 2025 die Pflege: Weniger Bürokratie, mehr Zeit für Patienten, bessere Pflegequalität. Erfahre, wie KI und digitale Tools den Pflegealltag verändern und wie du davon profitierst!",
-    imageUrl: "/spline/ki-health-apps-pflege.jpg", // Platzhalter, bitte ggf. ersetzen
+    imageUrl: "/spline/ki-health-apps-pflege.webp", // Platzhalter, bitte ggf. ersetzen
     categories: ["Digitalisierung", "Pflege", "Innovation", "KI", "Apps"],
     tags: [
       "digitale Pflege", "Künstliche Intelligenz in der Pflege", "Health-Apps 2025", "Pflege digitalisieren", "Zukunft der Pflege", "Pflegedokumentation KI", "Pflege Innovationen", "Pflegebranche Trends 2025", "Pflegebuddy"
@@ -508,7 +508,7 @@ Abonnieren Sie jetzt unseren kostenlosen Newsletter und erhalten Sie regelmäßi
 `,
     author: {
       name: "Mark Tietz",
-      avatarUrl: "/spline/author-mark.jpg",
+      avatarUrl: "/spline/author-mark.webp",
       authorId: "mark-tietz",
       bio: "Gründer von Pflegebuddy, Digitalisierungs-Enthusiast und Pflege-Optimist. Schreibt über Innovationen, Digitalisierung und Pflegepolitik."
     }
@@ -516,7 +516,7 @@ Abonnieren Sie jetzt unseren kostenlosen Newsletter und erhalten Sie regelmäßi
   {
     title: "Pflegebudget-Engpässe und Versicherungsfinanzierung: Herausforderung und Chance für die Pflege 2025",
     excerpt: "Pflegebudget-Engpässe und Unsicherheiten in der Versicherungsfinanzierung stellen 2025 große Herausforderungen für die Pflege dar. Erfahre, wie Reformen und Digitalisierung die Pflegefinanzierung zukunftssicher machen können!",
-    imageUrl: "/spline/pflegebudget-engpaesse-2025.jpg", // Platzhalter, bitte ggf. ersetzen
+    imageUrl: "/spline/pflegebudget-engpaesse-2025.webp", // Platzhalter, bitte ggf. ersetzen
     categories: ["Pflege", "Finanzierung", "Gesetzgebung", "Digitalisierung"],
     tags: [
       "Pflegebudget 2025", "Pflegepersonal-Stärkungsgesetz Umsetzung", "Engpässe in der Pflegefinanzierung", "Krankenversicherung Pflegebudget", "Pflegefinanzierung Zukunft", "Digitalisierung Pflegeabrechnung", "Pflegebranche Deutschland", "Pflegebuddy"
@@ -579,7 +579,7 @@ Abonnieren Sie unseren kostenlosen Newsletter und erhalten Sie regelmäßig aktu
 `,
     author: {
       name: "Mark Tietz",
-      avatarUrl: "/spline/author-mark.jpg",
+      avatarUrl: "/spline/author-mark.webp",
       authorId: "mark-tietz",
       bio: "Gründer von Pflegebuddy, Digitalisierungs-Enthusiast und Pflege-Optimist. Schreibt über Innovationen, Digitalisierung und Pflegepolitik."
     }

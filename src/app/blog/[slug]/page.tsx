@@ -1,8 +1,6 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '../blogPosts';
-import ReactMarkdown from 'react-markdown';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import BlogPostClientContent from './BlogPostClientContent';
@@ -11,7 +9,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = blogPosts.find((p) => p.slug === params.slug);
   if (!post) return {};
   
-  const ogImageUrl = post.imageUrl || '/default-og-image.jpg';
+  const ogImageUrl = post.imageUrl || '/default-og-image.webp';
   
   return {
     title: post.title,
@@ -58,13 +56,6 @@ function getReadingTime(text: string) {
   return Math.max(1, Math.round(words / 200));
 }
 
-function getShareUrl(slug: string) {
-  if (typeof window !== 'undefined') {
-    return window.location.href;
-  }
-  return `https://pflegebuddy.de/blog/${slug}`;
-}
-
 interface BlogPostPageProps {
   params: { slug: string };
 }
@@ -102,7 +93,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     'dateModified': post.date,
     'mainEntityOfPage': {
       '@type': 'WebPage',
-      '@id': shareUrl
+      '@id': `https://pflegebuddy.care/blog/${post.slug}`
     },
     'keywords': [...(post.categories || []), ...(post.tags || [])].join(', '),
     'publisher': {
@@ -111,7 +102,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       'url': 'https://pflegebuddy.care',
       'logo': {
         '@type': 'ImageObject',
-        'url': 'https://pflegebuddy.care/logo.png'
+        'url': 'https://pflegebuddy.care/logo.webp'
       }
     }
   };

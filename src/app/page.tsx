@@ -1,10 +1,6 @@
-import { Suspense } from "react";
-import Image from "next/image";
 import { FaRegFileAlt, FaRegLightbulb, FaRegChartBar, FaRegComments, FaRegCalendarAlt } from "react-icons/fa";
-import FeedbackButton from "./components/FeedbackButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 // import Footer from "./components/Footer"; // Remove Footer import
-import { blogPosts as pflegeBlogPosts } from "./blog/blogPosts";
 import dynamic from 'next/dynamic';
 // import HomeContent from './components/HomeContent'; // Remove direct import
 import PflegeQuiz from './components/PflegeQuiz';
@@ -68,7 +64,7 @@ export default function Home() {
     '@type': 'Organization',
     name: 'Pflegebuddy',
     url: 'https://pflegebuddy.care',
-    logo: 'https://pflegebuddy.care/logo.png',
+    logo: 'https://pflegebuddy.care/logo.webp',
     sameAs: [
       'https://www.facebook.com/pflegebuddy',
       'https://www.instagram.com/pflegebuddy.app',
@@ -172,7 +168,7 @@ export const metadata = {
     siteName: "Pflegebuddy",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Pflegebuddy App Vorschau"
@@ -185,6 +181,6 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz, Pflegewissen, Notfallmanagement und mehr. Persönlich, digital, kostenlos.",
-    images: ["/og-image.jpg"]
+    images: ["/og-image.webp"]
   }
 };

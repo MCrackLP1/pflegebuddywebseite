@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Pflegebuddy",
     images: [
       {
-        url: "/og-image.jpg", // Lege ein passendes Bild in /public ab
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Pflegebuddy App Vorschau"
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
-    images: ["/og-image.jpg"]
+    images: ["/og-image.webp"]
   }
 };
 
@@ -68,31 +68,28 @@ export default function RootLayout({
       <head>
         <link rel="alternate" type="application/rss+xml" title="Pflegebuddy Blog" href="/blog/rss.xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Pflegebuddy",
-              url: "https://pflegebuddy.care",
-              logo: "https://pflegebuddy.care/logo.png",
-              description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr.",
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "",
-                contactType: "customer service",
-                email: "info@pflegebuddy.care"
-              },
-              sameAs: [
-                "https://www.facebook.com/pflegebuddy",
-                "https://www.instagram.com/pflegebuddy.app",
-                "https://www.linkedin.com/company/pflegebuddy"
-              ]
-            })
-          }}
-        />
+        <link rel="icon" href="/logo.ico" sizes="any" />
+        <Script id="structured-data" type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Pflegebuddy",
+            "url": "https://pflegebuddy.care",
+            "logo": "https://pflegebuddy.care/logo.webp",
+            "description": "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "",
+              "contactType": "customer service",
+              "email": "info@pflegebuddy.care"
+            },
+            "sameAs": [
+              "https://www.facebook.com/pflegebuddy",
+              "https://www.instagram.com/pflegebuddy.app",
+              "https://www.linkedin.com/company/pflegebuddy"
+            ]
+          })
+        }} />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {/* Hide on mobile, show from medium screens up */}

@@ -17,7 +17,7 @@ export default function AutorenUebersicht() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {authors.map(author => {
             const avatarSrc = author.authorId === 'mark-tietz'
-              ? '/author-mark.jpg'
+              ? '/author-mark.webp'
               : author.avatarUrl;
             return (
               <a key={author.authorId} href={`/blog/autor/${author.authorId}`} className="flex flex-col items-center bg-[#23243a] border border-[#30b9c9]/30 rounded-xl p-6 shadow hover:shadow-lg transition-shadow">

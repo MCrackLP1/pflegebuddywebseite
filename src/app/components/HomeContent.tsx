@@ -2,12 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Suspense } from 'react';
-import { FaApple, FaGooglePlay, FaRegFileAlt, FaRegLightbulb, FaRegChartBar, FaRegComments, FaRegCalendarAlt } from 'react-icons/fa';
-import dynamic from 'next/dynamic';
-import { CheckCircle } from 'lucide-react';
+import { Suspense, lazy } from 'react';
+import { FaApple, FaGooglePlay } from 'react-icons/fa';
 
-const ThreeSceneClient = dynamic(() => import('./ThreeSceneClient'), { ssr: false });
+const ThreeSceneClient = lazy(() => import('./ThreeSceneClient'));
 
 interface Feature {
   icon: React.ReactNode;
@@ -25,7 +23,7 @@ export default function HomeContent({ features }: HomeContentProps) {
       {/* Hero Section */}
       <div className="relative min-h-[65vh] flex items-center justify-center px-2 sm:px-4 pt-24 pb-12 sm:pt-24 sm:pb-16 md:pt-28 md:pb-20 overflow-hidden">
         <Image 
-          src="/Headersectionbg.jpg" 
+          src="/Headersectionbg.webp" 
           alt="Pflegebuddy Header Hintergrund" 
           fill 
           style={{objectFit: 'cover', zIndex: 0}} 
@@ -76,7 +74,16 @@ export default function HomeContent({ features }: HomeContentProps) {
               animate={{ y: [0, -16, 0, 16, 0] }}
               transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <Suspense fallback={<div className="text-[#30b9c9]">Lädt 3D...</div>}>
+              <Suspense 
+                fallback={
+                  <div className="text-[#30b9c9] flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#30b9c9] mb-2"></div>
+                      <div>Lade Inhalte...</div>
+                    </div>
+                  </div>
+                }
+              >
                 <ThreeSceneClient />
               </Suspense>
             </motion.div>
@@ -107,21 +114,4 @@ export default function HomeContent({ features }: HomeContentProps) {
       </section>
     </>
   );
-}
-
-function renderIcon(iconName: string) {
-  switch (iconName) {
-    case 'file':
-      return <FaRegFileAlt className="text-[#0ea5e9]" size={32} />;
-    case 'lightbulb':
-      return <FaRegLightbulb className="text-[#00C4B4]" size={32} />;
-    case 'chart':
-      return <FaRegChartBar className="text-[#0ea5e9]" size={32} />;
-    case 'comments':
-      return <FaRegComments className="text-[#00C4B4]" size={32} />;
-    case 'calendar':
-      return <FaRegCalendarAlt className="text-[#0ea5e9]" size={32} />;
-    default:
-      return null;
-  }
 } 

@@ -10,14 +10,14 @@ export default function UeberUns() {
         <div className="flex flex-col sm:flex-row gap-8 items-center mb-8">
           <div className="flex-shrink-0">
             <Image
-              src="/author-mark.jpg"
+              src="/author-mark.webp"
               alt="Mark Tietz"
               width={120}
               height={120}
               className="rounded-full border-4 border-[#30b9c9]"
             />
             <Image
-              src="/author-tim.jpg"
+              src="/author-tim.webp"
               alt="Tim Werner"
               width={120}
               height={120}

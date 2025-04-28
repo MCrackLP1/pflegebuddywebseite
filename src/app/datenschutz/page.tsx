@@ -67,7 +67,7 @@ export default function Datenschutz() {
               auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO. Die Einwilligung ist jederzeit widerrufbar.
             </p>
             <p className="mt-2">
-              Der Datenübertragung in die USA liegt ein Angemessenheitsbeschluss der Europäischen Kommission, die "EU-US Data Privacy Framework" (EU-US DPF) zugrunde.
+              Der Datenübertragung in die USA liegt ein Angemessenheitsbeschluss der Europäischen Kommission, die &quot;EU-US Data Privacy Framework&quot; (EU-US DPF) zugrunde.
             </p>
           </section>
 

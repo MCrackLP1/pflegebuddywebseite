@@ -12,17 +12,17 @@ export default function AGB() {
           <section>
             <h2 className="text-xl font-semibold text-[#30b9c9] mb-3">1. Geltungsbereich</h2>
             <p>
-              Diese Allgemeinen Geschäftsbedingungen (nachfolgend "AGB") gelten für alle Verträge, die zwischen Mark Tietz & Tim Werner, Königplatz 3, 87448 Waltenhofen (nachfolgend "Anbieter") und dem Nutzer der App "Pflegebuddy" (nachfolgend "Nutzer") geschlossen werden.
+              Diese Allgemeinen Geschäftsbedingungen (nachfolgend &quot;AGB&quot;) gelten für alle Verträge, die zwischen Mark Tietz & Tim Werner, Königplatz 3, 87448 Waltenhofen (nachfolgend &quot;Anbieter&quot;) und dem Nutzer der App &quot;Pflegebuddy&quot; (nachfolgend &quot;Nutzer&quot;) geschlossen werden.
             </p>
             <p className="mt-2">
-              Mit der Nutzung der App "Pflegebuddy" oder der Website pflegebuddy.care erkennt der Nutzer diese AGB an. Abweichende Bedingungen des Nutzers werden nicht anerkannt, es sei denn, der Anbieter stimmt ihrer Geltung ausdrücklich schriftlich zu.
+              Mit der Nutzung der App &quot;Pflegebuddy&quot; oder der Website pflegebuddy.care erkennt der Nutzer diese AGB an. Abweichende Bedingungen des Nutzers werden nicht anerkannt, es sei denn, der Anbieter stimmt ihrer Geltung ausdrücklich schriftlich zu.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-semibold text-[#30b9c9] mb-3">2. Vertragsgegenstand</h2>
             <p>
-              Gegenstand dieser AGB ist die Nutzung der App "Pflegebuddy" und der Website pflegebuddy.care. Die App stellt Informationen, Tools und Services im Kontext der Pflege zur Verfügung.
+              Gegenstand dieser AGB ist die Nutzung der App &quot;Pflegebuddy&quot; und der Website pflegebuddy.care. Die App stellt Informationen, Tools und Services im Kontext der Pflege zur Verfügung.
             </p>
             <p className="mt-2">
               Der Anbieter behält sich das Recht vor, die angebotenen Leistungen jederzeit zu ändern, zu erweitern, einzuschränken oder einzustellen.

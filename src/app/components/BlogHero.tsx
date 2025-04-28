@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { FaSearch } from 'react-icons/fa';
-import { useState } from 'react';
 
 type BlogHeroProps = {
   searchQuery: string;

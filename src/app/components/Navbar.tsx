@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -11,7 +12,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center gap-2 text-[#30b9c9] font-bold text-xl hover:text-[#167080] transition-colors">
-            <img src="/logo.png" alt="PflegeBuddy Logo" className="w-8 h-8 object-contain" />
+            <Image src="/logo.webp" alt="PflegeBuddy Logo" width={32} height={32} className="w-8 h-8 object-contain" />
             PflegeBuddy
           </Link>
 

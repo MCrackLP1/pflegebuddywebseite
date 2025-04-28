@@ -48,7 +48,7 @@ ${categories || ''}
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <image>
-      <url>${baseUrl}/logo.png</url>
+      <url>${baseUrl}/logo.webp</url>
       <title>Pflegebuddy Blog</title>
       <link>${baseUrl}/blog</link>
     </image>

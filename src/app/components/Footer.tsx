@@ -1,5 +1,5 @@
 import React from "react";
-import { FaApple, FaGooglePlay, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaApple, FaGooglePlay, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (

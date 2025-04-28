@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, Suspense } from 'react';
 import BlogHero from '../components/BlogHero';
 import BlogGrid from '../components/BlogGrid';
 import CategoryFilter from '../components/CategoryFilter';
@@ -7,14 +7,14 @@ import { blogPosts } from './blogPosts';
 import TagFilter from '../components/TagFilter';
 import { useSearchParams } from 'next/navigation';
 
-export default function BlogPage() {
+function BlogPageContent() {
   // Extract all unique categories and tags from blogPosts
   const allCategories = useMemo(() => Array.from(
     new Set(blogPosts.flatMap(post => post.categories))
-  ), [blogPosts]);
+  ), []);
   const allTags = useMemo(() => Array.from(
     new Set(blogPosts.flatMap(post => post.tags || []))
-  ), [blogPosts]);
+  ), []);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -25,7 +25,7 @@ export default function BlogPage() {
     if (tag && allTags.includes(tag) && !selectedTags.includes(tag)) {
       setSelectedTags([tag]);
     }
-  }, [searchParams, allTags]);
+  }, [searchParams, allTags, selectedTags]);
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategories((prev) =>
@@ -75,5 +75,13 @@ export default function BlogPage() {
         <BlogGrid posts={filteredPosts} />
       </div>
     </main>
+  );
+}
+
+export default function BlogPage() {
+  return (
+    <Suspense fallback={<div>Lade Blog...</div>}>
+      <BlogPageContent />
+    </Suspense>
   );
 } 

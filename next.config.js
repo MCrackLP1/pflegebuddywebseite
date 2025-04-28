@@ -3,7 +3,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Bild-Optimierung für bessere SEO und Ladezeiten
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -15,18 +14,7 @@ const nextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  // Komprimierung für bessere Ladegeschwindigkeit
   compress: true,
-  // Optimierungen für bessere Core Web Vitals
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: [
-      'react-icons', 
-      'lucide-react', 
-      'framer-motion'
-    ],
-  },
-  // Headers für bessere Sicherheit und SEO
   async headers() {
     return [
       {
@@ -76,4 +64,4 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-module.exports = withBundleAnalyzer(nextConfig) 
+module.exports = withBundleAnalyzer(nextConfig)
