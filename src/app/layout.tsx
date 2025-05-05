@@ -90,6 +90,19 @@ export default function RootLayout({
             ]
           })
         }} />
+        {/* Brevo Tracker */}
+        <Script src="https://cdn.brevo.com/js/sdk-loader.js" async />
+        <Script id="brevo-tracker" strategy="afterInteractive">
+          {`
+            window.Brevo = window.Brevo || [];
+            Brevo.push([
+                "init",
+                {
+                  client_key: "m75l043hj2peifdjjybyxxby"
+                }
+            ]);
+          `}
+        </Script>
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {/* Hide on mobile, show from medium screens up */}
