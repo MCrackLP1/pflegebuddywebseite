@@ -4,9 +4,69 @@ import { blogPosts } from '../blogPosts';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import BlogPostClientContent from './BlogPostClientContent';
+import fs from 'fs';
+import path from 'path';
+
+// Diese Funktion findet einen Blogbeitrag anhand des Slugs
+// Sie sucht sowohl in statischen als auch in dynamischen Beiträgen
+async function findBlogPost(slug: string) {
+  // Zuerst in statischen Beiträgen suchen
+  const staticPost = blogPosts.find((p) => p.slug === slug);
+  if (staticPost) return staticPost;
+  
+  // Wenn nicht gefunden, in dynamischen JSON-Dateien suchen
+  const postsDir = path.join(process.cwd(), 'blog-posts');
+  const jsonPath = path.join(postsDir, `${slug}.json`);
+  
+  try {
+    if (fs.existsSync(jsonPath)) {
+      const fileContent = fs.readFileSync(jsonPath, 'utf8');
+      return JSON.parse(fileContent);
+    }
+  } catch (error) {
+    console.error(`Error reading or parsing ${jsonPath}:`, error);
+  }
+  
+  // Kein Beitrag gefunden
+  return null;
+}
+
+// Diese Funktion lädt alle Blogbeiträge (statisch + dynamisch)
+async function getAllBlogPosts() {
+  const staticPosts = [...blogPosts];
+  
+  // Dynamische Beiträge aus JSON-Dateien laden
+  const postsDir = path.join(process.cwd(), 'blog-posts');
+  let dynamicPosts = [];
+  
+  try {
+    if (fs.existsSync(postsDir)) {
+      const files = fs.readdirSync(postsDir).filter(file => file.endsWith('.json'));
+      
+      for (const file of files) {
+        const filePath = path.join(postsDir, file);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        try {
+          const post = JSON.parse(fileContent);
+          // Überprüfe, ob der Beitrag nicht bereits in den statischen Beiträgen vorhanden ist
+          if (!staticPosts.some(staticPost => staticPost.slug === post.slug)) {
+            dynamicPosts.push(post);
+          }
+        } catch (error) {
+          console.error(`Error parsing ${file}:`, error);
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error reading dynamic blog posts:', error);
+  }
+  
+  // Alle Beiträge kombinieren
+  return [...staticPosts, ...dynamicPosts];
+}
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+  const post = await findBlogPost(params.slug);
   if (!post) return {};
   
   const ogImageUrl = post.imageUrl || '/default-og-image.webp';
@@ -46,7 +106,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 // Diese Funktion generiert statische Pfade für alle Blog-Posts
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
+  const allPosts = await getAllBlogPosts();
+  return allPosts.map((post) => ({
     slug: post.slug,
   }));
 }
@@ -60,13 +121,16 @@ interface BlogPostPageProps {
   params: { slug: string };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const post = await findBlogPost(params.slug);
   if (!post) notFound();
 
+  // Alle Beiträge für die verwandten Beiträge laden
+  const allPosts = await getAllBlogPosts();
+
   // Related posts: share at least one category, not the current post
-  const related = blogPosts.filter(
-    (p) => p.slug !== post.slug && p.categories.some((cat) => post.categories.includes(cat))
+  const related = allPosts.filter(
+    (p) => p.slug !== post.slug && p.categories.some((cat: string) => post.categories.includes(cat))
   ).slice(0, 3);
 
   const readingTime = getReadingTime(post.content);
