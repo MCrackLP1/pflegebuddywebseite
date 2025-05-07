@@ -17,6 +17,91 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "Pflegereform 2025: Das müssen Sie jetzt wissen! Alle Änderungen bei Pflegegeld, Sachleistungen & Co.",
+    excerpt: "Erfahren Sie alles Wichtige zur Pflegereform 2025: Höheres Pflegegeld, angepasste Sachleistungen, Änderungen beim Entlastungsbetrag und mehr. Ihr umfassender Ratgeber zu den neuen Pflegeleistungen ab dem 1. Januar 2025!",
+    imageUrl: "/spline/pflegereform-aenderungen-pflegegeld.webp",
+    categories: ["Pflege", "Gesetzgebung", "Finanzen"],
+    tags: ["Pflegereform", "Pflegegeld", "Sachleistungen", "Entlastungsbetrag", "Pflegeversicherung"],
+    slug: "pflegereform-2025-aenderungen",
+    date: "2025-05-07",
+    content: `
+# Pflegereform 2025: Das müssen Sie jetzt wissen! Alle Änderungen bei Pflegegeld, Sachleistungen & Co.
+
+Das Jahr 2025 steht vor der Tür und mit ihm wichtige Neuerungen in der deutschen Pflegelandschaft. Die Pflegereform 2025 ist in aller Munde und zielt darauf ab, die häusliche Pflege zu stärken und Pflegebedürftige sowie ihre engagierten Angehörigen finanziell besser zu unterstützen. Doch was bedeuten diese Gesetzesänderungen konkret für Ihren Alltag? Welche neuen Regelungen gelten ab dem 1. Januar 2025 für das Pflegegeld, die Pflegesachleistungen und den wichtigen Entlastungsbetrag? In diesem umfassenden Ratgeber erklären wir Ihnen klar und verständlich die wichtigsten Punkte der Pflegereform 2025, damit Sie bestens informiert sind und alle Ihnen zustehenden Leistungen optimal nutzen können.
+
+## Was ist das Hauptziel der Pflegereform 2025?
+
+Die Pflegereform 2025 verfolgt mehrere zentrale Ziele, die das deutsche Pflegesystem zukunftsfester machen sollen. Im Vordergrund steht die dringend notwendige finanzielle Entlastung von Pflegebedürftigen und ihren Familien. Angesichts kontinuierlich steigender Kosten und der unaufhaltsamen demografischen Entwicklung ist eine Anpassung der Pflegeleistungen unerlässlich. Ein weiteres Kernanliegen ist die Stärkung der häuslichen Pflege. Dieser Fokus trägt dem Wunsch der meisten Menschen Rechnung, so lange wie möglich in ihrer vertrauten Umgebung leben und versorgt werden zu können. Darüber hinaus sollen bestimmte Leistungsbereiche, wie die Kombination von Leistungen, flexibler gestaltet werden, um individueller auf die Bedürfnisse der Betroffenen eingehen zu können.
+
+## Die wichtigsten Änderungen der Pflegereform 2025 im Detail
+
+Ab dem 1. Januar 2025 treten mehrere entscheidende Änderungen im Pflegeversicherungsgesetz (SGB XI) in Kraft. Hier sind die Details, die Sie kennen sollten:
+
+### Mehr Geld für die Pflege: Erhöhung des Pflegegeldes ab 01.01.2025
+
+Eine der zentralen Verbesserungen der Pflegereform 2025 ist die Anhebung des Pflegegeldes. Das Pflegegeld, das direkt an Pflegebedürftige zur freien Verfügung ausgezahlt wird, wenn sie die Pflege beispielsweise durch Angehörige, Freunde oder Nachbarn selbstständig sicherstellen, wird um 4,5 Prozent erhöht.
+
+**Was bedeutet das konkret für Sie?** Diese Erhöhung des Pflegegeldes 2025 soll die gestiegenen Lebenshaltungskosten zumindest teilweise kompensieren. Gleichzeitig ist es eine wichtige Anerkennung für die unschätzbar wertvolle Arbeit, die pflegende Angehörige tagtäglich leisten. Die genaue Höhe des neuen Pflegegeldes richtet sich nach dem jeweiligen Pflegegrad.
+
+**Wer profitiert davon?** Alle Pflegebedürftigen ab Pflegegrad 2, die Pflegegeld beziehen, profitieren von dieser Leistungsanpassung.
+
+### Bessere Unterstützung durch Profis: Anpassung der Pflegesachleistungen 2025
+
+Auch die Pflegesachleistungen 2025, die für die Inanspruchnahme professioneller Pflegedienste (ambulante Pflege) vorgesehen sind, erfahren im Zuge der Pflegereform 2025 eine Erhöhung um 4,5 Prozent.
+
+**Was bedeutet das konkret für Sie?** Ihnen steht ein höheres monatliches Budget zur Verfügung, um Leistungen wie Körperpflege, Hilfe bei der Ernährung, Unterstützung bei der Mobilität oder hauswirtschaftliche Versorgung durch anerkannte ambulante Pflegedienste zu finanzieren.
+
+**Wer profitiert davon?** Alle Pflegebedürftigen, die zu Hause von einem ambulanten Pflegedienst betreut und versorgt werden.
+
+### Mehr Flexibilität im Alltag: Änderungen beim Entlastungsbetrag 2025
+
+Der Entlastungsbetrag 2025, der allen Pflegebedürftigen bereits ab Pflegegrad 1 zusteht (aktuell einheitlich 125 Euro monatlich), ist ein wichtiges Instrument zur Finanzierung von Angeboten zur Unterstützung im Alltag. Auch hier ist im Rahmen der Reform eine Anpassung vorgesehen, um die Nutzung dieser wichtigen Hilfen weiter zu fördern und zu erleichtern. Die allgemeine Leistungsdynamisierung von 4,5% zum 01.01.2025 gilt auch für den Entlastungsbetrag.
+
+**Wofür kann der Entlastungsbetrag eingesetzt werden?** Beispielsweise für die Teilnahme an Betreuungsgruppen, die Unterstützung durch Alltagsbegleiter, für Haushaltshilfen oder zur Mitfinanzierung von Angeboten der Tages- und Nachtpflege.
+
+**Wer profitiert davon?** Alle Pflegebedürftigen ab Pflegegrad 1.
+
+### Wichtige Neuerungen bei Verhinderungs- und Kurzzeitpflege (Ausblick & Zusammenlegung)
+
+Es ist wichtig zu wissen, dass bereits zum 1. Januar 2024 erste Schritte zur Flexibilisierung von Verhinderungs- und Kurzzeitpflege für eine spezielle Gruppe – junge Pflegebedürftige bis zum vollendeten 25. Lebensjahr mit Pflegegrad 4 oder 5 – umgesetzt wurden. Für alle anderen Pflegebedürftigen ist die vollständige Zusammenlegung der bisher getrennten Budgets für Verhinderungs- und Kurzzeitpflege zu einem gemeinsamen Jahresbetrag für das Jahr 2025 vorgesehen. Dieser neue Gesamtleistungsbetrag soll dann deutlich flexibler und bedarfsgerechter eingesetzt werden können.
+
+**Was bedeutet das für die Praxis?** Deutlich mehr Flexibilität und weniger bürokratischer Aufwand bei der Organisation von Ersatzpflege (wenn die Hauptpflegeperson verhindert ist) oder einer vorübergehenden stationären Versorgung in einer Kurzzeitpflegeeinrichtung.
+
+**Wer profitiert davon?** Sowohl Pflegebedürftige als auch ihre pflegenden Angehörigen, die eine Vertretung, eine geplante Auszeit oder eine zeitweise Entlastung vom Pflegealltag benötigen.
+
+## Was bedeuten diese Änderungen der Pflegereform 2025 konkret für Ihren Geldbeutel und Ihre Planung?
+
+Die Pflegereform 2025 bringt spürbare finanzielle Verbesserungen und mehr Gestaltungsspielraum.
+
+**Ein Rechenbeispiel:** Eine Person mit Pflegegrad 3, die aktuell Pflegegeld bezieht, wird ab dem 1. Januar 2025 einen entsprechend um 4,5 % höheren monatlichen Betrag erhalten. Nutzen Sie diesen zusätzlichen finanziellen Spielraum, um die häusliche Pflegesituation bestmöglich zu gestalten oder um pflegende Angehörige gezielt zu unterstützen und zu entlasten.
+
+**Unser Tipp:** Setzen Sie sich frühzeitig mit den Neuerungen auseinander. Prüfen Sie genau, welche der angepassten Leistungen für Sie oder Ihre Angehörigen relevant sind. Planen Sie vorausschauend, wie Sie die erhöhten Budgets optimal einsetzen können – sei es für mehr professionelle Unterstützung durch einen qualifizierten Pflegedienst oder zur gezielten Entlastung und Anerkennung pflegender Angehöriger.
+
+## Wo erhalten Sie verlässliche Informationen und individuelle Beratung zur Pflegereform 2025?
+
+Sich im komplexen System der Pflegeleistungen zurechtzufinden, ist nicht immer einfach, besonders wenn Gesetzesänderungen anstehen. Zögern Sie daher nicht, professionelle und individuelle Beratung in Anspruch zu nehmen:
+
+- **Ihre zuständige Pflegekasse:** Ist und bleibt Ihr erster und wichtigster Ansprechpartner für alle konkreten Fragen rund um Ihre Leistungsansprüche und die Umsetzung der Pflegereform 2025.
+- **Pflegestützpunkte:** Diese bieten bundesweit kostenlose und unabhängige Beratung zu allen Themen rund um Pflege und Versorgung.
+- **Unabhängige Pflegeberater (nach § 7a SGB XI):** Können sehr individuell auf Ihre persönliche Situation eingehen und Sie umfassend beraten.
+- **Verbraucherzentralen:** Bieten ebenfalls oft Rat und Unterstützung bei Fragen zu Pflegeleistungen.
+
+## Fazit und Ausblick
+
+Die Pflegereform 2025 ist ein bedeutender Schritt, um die Pflege in Deutschland zukunftsfest zu machen und die Betroffenen sowie ihre Familien finanziell zu entlasten. Die beschlossene Erhöhung von Pflegegeld 2025 und Pflegesachleistungen 2025 sowie die geplanten Flexibilisierungen, insbesondere beim Entlastungsbetrag 2025 und der Zusammenlegung von Verhinderungs- und Kurzzeitpflege, eröffnen neue Möglichkeiten und schaffen dringend benötigten Spielraum.
+
+**Wichtig:** Informieren Sie sich gut und rechtzeitig über alle Änderungen. Nutzen Sie die Ihnen zustehenden (erhöhten) Leistungen, um die Pflegesituation für sich und Ihre Angehörigen bestmöglich zu gestalten. Dieser Artikel wird bei neuen Erkenntnissen oder Detailänderungen aktualisiert.
+
+*Stand: 7. Mai 2025 – Bitte beachten Sie, dass sich Details bis zum Inkrafttreten noch präzisieren können. Informieren Sie sich immer auch bei Ihrer Pflegekasse.*
+`,
+    author: {
+      name: "Tim Werner",
+      avatarUrl: "/spline/author-tim.webp",
+      authorId: "tim-werner",
+      bio: "Pflegewissenschaftler, Co-Autor bei Pflegebuddy. Setzt sich für Reformen und digitale Lösungen in der Pflege ein."
+    }
+  },
+  {
     title: "Verpflichtende TI-Anbindung für Pflegeeinrichtungen ab 1. Juli 2025 – Was Sie wissen müssen",
     excerpt: "Ab 1. Juli 2025 sind alle Pflegeeinrichtungen verpflichtet, sich an die Telematikinfrastruktur (TI) anzubinden. Hier erfahren Sie alles zu gesetzlichen Vorgaben, Zeitplan, Technik, Nutzen und Herausforderungen.",
     imageUrl: "/spline/ti-anbindung.webp",
@@ -204,10 +289,10 @@ Ohne grundlegende Struktur- und Finanzreformen droht die Pflegeversorgung in Deu
 Bleibe auf dem Laufenden zu aktuellen Reformen, Digitalstrategien und Fördermöglichkeiten für die Pflege – direkt hier im Blog oder auf [www.pflegebuddy.care](https://www.pflegebuddy.care) (bald online).
     `,
     author: {
-      name: "Tim Werner",
-      avatarUrl: "/spline/author-tim.webp",
-      authorId: "tim-werner",
-      bio: "Pflegewissenschaftler, Co-Autor bei Pflegebuddy. Setzt sich für Reformen und digitale Lösungen in der Pflege ein."
+      name: "Mark Tietz",
+      avatarUrl: "/spline/author-mark.webp",
+      authorId: "mark-tietz",
+      bio: "Gründer von Pflegebuddy, Digitalisierungs-Enthusiast und Pflege-Optimist. Schreibt über Innovationen, Digitalisierung und Pflegepolitik."
     }
   },
   {
