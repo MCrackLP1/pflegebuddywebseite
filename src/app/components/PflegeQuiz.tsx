@@ -1,7 +1,16 @@
 'use client';
 
 import { useState } from 'react';
-import { FaRegUser, FaRegSmile, FaRegMeh, FaRegLightbulb } from 'react-icons/fa';
+import { FaRegUser, FaRegSmile, FaRegMeh, FaRegLightbulb, FaEnvelope } from 'react-icons/fa';
+
+// Add type declaration for Brevo
+declare global {
+  interface Window {
+    Brevo?: {
+      push: (args: any[]) => void;
+    }
+  }
+}
 
 const quizQuestions = [
   {
@@ -74,6 +83,16 @@ export default function PflegeQuiz() {
   const total = quizQuestions.length;
   const progress = ((step + (finished ? 1 : 0)) / total) * 100;
 
+  // Function to show newsletter popup
+  const showNewsletterPopup = () => {
+    if (typeof window !== 'undefined' && window.Brevo) {
+      window.Brevo.push(["show", {
+        id: "newsletter",
+        back: false
+      }]);
+    }
+  };
+
   function handleAnswer(idx: number) {
     setSelected(idx);
     if (idx === q.answer) {
@@ -123,7 +142,7 @@ export default function PflegeQuiz() {
         <div className="absolute w-full h-full rounded-xl shadow-xl bg-gradient-to-br from-[#30b9c9] to-[#4dd0e1] text-white flex flex-col items-center justify-center transition-transform duration-700">
           <span className="text-lg font-semibold mb-2">Dein Gutscheincode</span>
           <span className="font-mono text-2xl tracking-widest bg-white/20 px-4 py-2 rounded-lg">Early25</span>
-          <span className="text-xs mt-2">25% Rabatt auf Premium</span>
+          <span className="text-xs mt-2">25% Rabatt auf zukünftige Premium-Funktionen</span>
         </div>
       </div>
     );
@@ -135,7 +154,17 @@ export default function PflegeQuiz() {
         <div className="bg-[#23243a] rounded-2xl p-8 text-white flex flex-col items-center">
           <FaRegLightbulb size={48} className="mb-4 text-[#30b9c9]" />
           <h3 className="text-2xl font-bold mb-4 text-[#30b9c9]">Quiz-Challenge</h3>
-          <p className="mb-6 text-lg text-center">Löse jetzt das Quiz und sichere dir <span className="font-bold text-[#4dd0e1]">25% Rabatt</span> auf die Premium-Funktionen von Pflegebuddy!</p>
+          <p className="mb-6 text-lg text-center">Löse jetzt das Quiz und sichere dir <span className="font-bold text-[#4dd0e1]">25% Rabatt</span> auf die zukünftigen Premium-Funktionen von Pflegebuddy!</p>
+          <p className="mb-6 text-sm text-center text-[#999]">
+            <button 
+              onClick={showNewsletterPopup}
+              className="text-[#30b9c9] hover:text-[#4dd0e1] underline inline-flex items-center gap-1"
+            >
+              <FaEnvelope size={14} />
+              Trage dich in unseren Newsletter ein
+            </button>
+            {' '}um den Gutschein zu erhalten, sobald Premium-Funktionen verfügbar sind.
+          </p>
           <button
             className="bg-[#30b9c9] hover:bg-[#2693a5] text-white px-8 py-3 rounded-xl font-semibold text-lg shadow-md transition-all"
             onClick={() => setStarted(true)}
@@ -153,7 +182,17 @@ export default function PflegeQuiz() {
         <h3 className="text-2xl font-bold mb-4 text-[#30b9c9]">Quiz abgeschlossen!</h3>
         <p className="mb-4">Du hast {score} von {quizQuestions.length} Fragen richtig beantwortet.</p>
         <CouponCard />
-        <p className="text-sm">Nutze diesen Code für 25% Rabatt auf die Premium-Funktionen von Pflegebuddy!</p>
+        <p className="text-sm mb-2">
+          <button 
+            onClick={showNewsletterPopup}
+            className="text-[#30b9c9] hover:text-[#4dd0e1] underline inline-flex items-center gap-1"
+          >
+            <FaEnvelope size={14} />
+            Trage dich in unseren Newsletter ein
+          </button>
+          {' '}und erhalte diesen Gutscheincode, sobald die Premium-Funktionen verfügbar sind!
+        </p>
+        <p className="text-xs text-[#999] mb-4">Aktuell ist die App komplett kostenlos nutzbar. Premium-Funktionen werden in Zukunft hinzugefügt.</p>
       </div>
     );
   }

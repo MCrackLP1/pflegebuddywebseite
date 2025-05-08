@@ -1,4 +1,4 @@
-import { FaRegFileAlt, FaRegLightbulb, FaRegChartBar, FaRegComments, FaRegCalendarAlt } from "react-icons/fa";
+import { FaRegFileAlt, FaRegLightbulb, FaRegChartBar, FaRegComments, FaRegCalendarAlt, FaWifi } from "react-icons/fa";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 // import Footer from "./components/Footer"; // Remove Footer import
 import dynamic from 'next/dynamic';
@@ -33,6 +33,11 @@ const features = [
     icon: <FaRegComments className="text-[#00C4B4]" size={32} />, 
     title: "App-weite Suche", 
     desc: "Zentrale Suchfunktion für Notfälle, Krankheiten, Standards, Lexikon & Wikipedia. Alles sofort auffindbar."
+  },
+  {
+    icon: <FaWifi className="text-[#0ea5e9]" size={32} />, 
+    title: "Offline-Fähigkeit", 
+    desc: "Alle wichtigen Funktionen auch ohne Internetverbindung nutzbar. Ideal für den Einsatz im Krankenhaus oder unterwegs."
   },
   {
     icon: <FaRegCalendarAlt className="text-[#0ea5e9]" size={32} />, 
