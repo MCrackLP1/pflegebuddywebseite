@@ -156,14 +156,7 @@ export default function PflegeQuiz() {
           <h3 className="text-2xl font-bold mb-4 text-[#30b9c9]">Quiz-Challenge</h3>
           <p className="mb-6 text-lg text-center">Löse jetzt das Quiz und sichere dir <span className="font-bold text-[#4dd0e1]">25% Rabatt</span> auf die zukünftigen Premium-Funktionen von Pflegebuddy!</p>
           <p className="mb-6 text-sm text-center text-[#999]">
-            <button 
-              onClick={showNewsletterPopup}
-              className="text-[#30b9c9] hover:text-[#4dd0e1] underline inline-flex items-center gap-1"
-            >
-              <FaEnvelope size={14} />
-              Trage dich in unseren Newsletter ein
-            </button>
-            {' '}um den Gutschein zu erhalten, sobald Premium-Funktionen verfügbar sind.
+            Schließe das Quiz erfolgreich ab, um einen Gutscheincode für Premium-Funktionen zu erhalten.
           </p>
           <button
             className="bg-[#30b9c9] hover:bg-[#2693a5] text-white px-8 py-3 rounded-xl font-semibold text-lg shadow-md transition-all"
