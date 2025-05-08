@@ -93,16 +93,16 @@ export default function HomeContent({ features }: HomeContentProps) {
 
       {/* Features Section */}
       <section id="funktionen" className="py-16 bg-[#23243a] px-6">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-10 text-[#30b9c9]">Hauptfunktionen der Pflegebuddy App</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="flex flex-nowrap overflow-x-auto pb-4 gap-4 justify-center hide-scrollbar">
             {features.map((f, i) => (
               <motion.div
                 key={f.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 + i * 0.15 }}
-                className="flex flex-col items-center bg-[#167080]/80 backdrop-blur rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="flex-shrink-0 w-[calc(100%-24px)] sm:w-[calc(50%-16px)] md:w-[calc(33.333%-16px)] lg:w-[220px] flex flex-col items-center bg-[#167080]/80 backdrop-blur rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
                 {f.icon}
                 <h3 className="mt-4 text-lg font-semibold text-[#f3f6fa]">{f.title}</h3>
@@ -112,6 +112,16 @@ export default function HomeContent({ features }: HomeContentProps) {
           </div>
         </div>
       </section>
+
+      <style jsx global>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </>
   );
 } 
