@@ -9,6 +9,7 @@ import FeedbackButton from "./components/FeedbackButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import CookieConsent from "./components/CookieConsent";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -124,6 +125,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
+        <Analytics />
       </body>
     </html>
   );
