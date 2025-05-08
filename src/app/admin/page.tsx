@@ -14,7 +14,7 @@ export default function AdminLogin() {
     
     // Einfache Authentifizierung - in einer Produktionsumgebung sollte dies 
     // sicherer implementiert werden, z.B. mit NextAuth oder einer API
-    if (username === 'tim' && password === 'pflegebuddy2025') {
+    if (username === 'tim' && password === 'Killingyou11') {
       // Login erfolgreich
       localStorage.setItem('admin-auth', 'true');
       localStorage.setItem('admin-user', 'Tim Werner');
