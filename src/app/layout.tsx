@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pflegebuddy.care'),
+  metadataBase: new URL('https://plegebuddy.care'),
   title: {
     default: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     template: "%s | Pflegebuddy"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
-    url: "https://pflegebuddy.care/",
+    url: "https://plegebuddy.care/",
     siteName: "Pflegebuddy",
     images: [
       {
@@ -75,14 +75,14 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Pflegebuddy",
-            "url": "https://pflegebuddy.care",
-            "logo": "https://pflegebuddy.care/logo.webp",
+            "url": "https://plegebuddy.care",
+            "logo": "https://plegebuddy.care/logo.webp",
             "description": "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr.",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "",
               "contactType": "customer service",
-              "email": "info@pflegebuddy.care"
+              "email": "info@plegebuddy.care"
             },
             "sameAs": [
               "https://www.facebook.com/pflegebuddy",

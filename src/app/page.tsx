@@ -68,8 +68,8 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Pflegebuddy',
-    url: 'https://pflegebuddy.care',
-    logo: 'https://pflegebuddy.care/logo.webp',
+    url: 'https://plegebuddy.care',
+    logo: 'https://plegebuddy.care/logo.webp',
     sameAs: [
       'https://www.facebook.com/pflegebuddy',
       'https://www.instagram.com/pflegebuddy.app',
@@ -79,7 +79,7 @@ export default function Home() {
       '@type': 'ContactPoint',
       telephone: '',
       contactType: 'customer service',
-      email: 'info@pflegebuddy.care'
+      email: 'info@plegebuddy.care'
     }
   };
 
@@ -164,12 +164,12 @@ export const metadata = {
   description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz, Pflegewissen, Notfallmanagement und mehr. Persönlich, digital, kostenlos.",
   keywords: ["Pflege", "digitale Pflegehilfe", "Pflegeberatung", "Pflegewissen", "Notfallmanagement", "Service-Marktplatz", "Experten-Chat"],
   alternates: {
-    canonical: "https://pflegebuddy.care/",
+    canonical: "https://plegebuddy.care/",
   },
   openGraph: {
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz, Pflegewissen, Notfallmanagement und mehr. Persönlich, digital, kostenlos.",
-    url: "https://pflegebuddy.care/",
+    url: "https://plegebuddy.care/",
     siteName: "Pflegebuddy",
     images: [
       {

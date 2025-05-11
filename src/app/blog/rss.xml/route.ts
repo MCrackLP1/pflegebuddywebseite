@@ -6,7 +6,7 @@ function rfc822(dateString: string) {
 }
 
 export async function GET() {
-  const baseUrl = 'https://pflegebuddy.care';
+  const baseUrl = 'https://plegebuddy.care';
   const feedItems = blogPosts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 20) // Nur die 20 neuesten Beiträge im Feed
@@ -24,7 +24,7 @@ export async function GET() {
       <content:encoded><![CDATA[${post.content.substring(0, 500)}... <a href="${baseUrl}/blog/${post.slug}">Weiterlesen</a>]]></content:encoded>
       ${imageUrl ? `<enclosure url="${imageUrl}" type="image/jpeg" />` : ''}
       <pubDate>${rfc822(post.date)}</pubDate>
-      <author>info@pflegebuddy.care (${post.author.name})</author>
+      <author>info@plegebuddy.care (${post.author.name})</author>
 ${categories || ''}
     </item>`;
   }).join('\n');
