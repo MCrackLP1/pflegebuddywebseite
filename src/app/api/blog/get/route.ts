@@ -3,6 +3,10 @@ import fs from 'fs';
 import path from 'path';
 import { BlogPost } from '@/app/blog/blogPosts';
 
+// Diese Konfiguration sagt Next.js, dass diese Route dynamisch ist
+// und nicht versucht werden soll, sie statisch zu rendern
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   try {
     const slug = req.nextUrl.searchParams.get('slug');

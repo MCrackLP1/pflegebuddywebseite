@@ -3,6 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import { BlogPost } from '@/app/blog/blogPosts';
 
+// Diese Konfiguration verhindert statisches Rendering für API-Routen
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
   try {
     const blogPost = await req.json() as BlogPost;

@@ -3,6 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import { BlogPost, blogPosts } from '@/app/blog/blogPosts';
 
+// Diese Konfiguration verhindert, dass Next.js versucht, die Route statisch zu rendern
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     // Zuerst importieren wir die statischen Blogposts aus der blogPosts.ts Datei

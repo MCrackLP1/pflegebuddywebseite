@@ -3,6 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import { blogPosts } from '@/app/blog/blogPosts';
 
+// Diese Konfiguration ist notwendig, da die Route nextUrl.searchParams verwendet
+export const dynamic = 'force-dynamic';
+
 export async function DELETE(req: NextRequest) {
   try {
     const slug = req.nextUrl.searchParams.get('slug');

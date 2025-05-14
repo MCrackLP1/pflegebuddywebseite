@@ -6,6 +6,9 @@ import { writeFile } from 'fs/promises';
 // Maximale Dateigröße: 2MB
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB in Bytes
 
+// Verhindern von statischem Rendering für API-Routen
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
