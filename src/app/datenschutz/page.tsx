@@ -137,15 +137,46 @@ export default function Datenschutz() {
               oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde.
             </p>
 
-            <h3 className="text-lg font-medium mb-2">Cookies</h3>
+            <h3 className="text-lg font-medium mb-2">Cookies und Tracking-Technologien</h3>
             <p className="mb-4">
-              Unsere Website verwendet nur technisch notwendige Cookies. Technisch notwendige Cookies werden gesetzt, um die Grundfunktionen
-              der Website zu gewährleisten.
+              Unsere Website verwendet verschiedene Arten von Cookies und Tracking-Technologien, die je nach Kategorie unterschiedliche Zwecke erfüllen.
+              Wir geben Ihnen die Möglichkeit, selbst zu entscheiden, welche Cookies Sie zulassen möchten. Sie können Ihre Einstellungen jederzeit 
+              in unserer Cookie-Einstellungsbox anpassen.
             </p>
-            <p>
-              Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert. Der Websitebetreiber hat ein 
-              berechtigtes Interesse an der Speicherung von technisch notwendigen Cookies zur technisch fehlerfreien und optimierten Bereitstellung 
-              seiner Dienste.
+
+            <h4 className="font-medium mb-1 mt-3">Technisch notwendige Cookies</h4>
+            <p className="mb-4">
+              Diese Cookies sind für die Grundfunktionen der Website erforderlich und können nicht deaktiviert werden. Sie speichern Ihre Cookie-Präferenzen 
+              und ermöglichen die ordnungsgemäße Funktion der Website. Diese Cookies setzen wir auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO, 
+              da wir ein berechtigtes Interesse an der technisch fehlerfreien Bereitstellung unserer Dienste haben.
+            </p>
+
+            <h4 className="font-medium mb-1">Analyse-Cookies (Vercel Analytics)</h4>
+            <p className="mb-4">
+              Bei Ihrer Einwilligung nutzen wir Vercel Analytics, um die Nutzung unserer Website zu analysieren und zu verbessern. 
+              Vercel Analytics ist ein Webanalyse-Dienst der Vercel Inc. (340 S Lemon Ave #4133, Walnut, CA 91789, USA). Diese Cookies 
+              sammeln anonymisierte Daten darüber, wie Besucher die Website nutzen. Dazu gehören Informationen wie die Anzahl der Besucher, 
+              von welchen Websites Besucher zur Seite gekommen sind und welche Seiten sie besuchen. 
+              Die Verarbeitung erfolgt nur mit Ihrer Einwilligung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.
+              Weitere Informationen finden Sie in der <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">
+              Datenschutzerklärung von Vercel</a>.
+            </p>
+
+            <h4 className="font-medium mb-1">Marketing-Cookies (Brevo)</h4>
+            <p className="mb-4">
+              Bei Ihrer Einwilligung nutzen wir Brevo, um Ihnen relevante Inhalte anzuzeigen und unser Marketing zu optimieren. 
+              Brevo ist ein E-Mail-Marketing- und Automatisierungsdienst der Brevo SAS (55 rue d'Amsterdam, 75008 Paris, Frankreich). 
+              Diese Cookies helfen uns, die Relevanz unserer Kommunikation zu verbessern und Ihnen passende Inhalte anzuzeigen. 
+              Die Verarbeitung erfolgt nur mit Ihrer Einwilligung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.
+              Weitere Informationen finden Sie in der <a href="https://www.brevo.com/legal/privacypolicy/" target="_blank" rel="noopener noreferrer" className="text-[#30b9c9] underline font-semibold">
+              Datenschutzerklärung von Brevo</a>.
+            </p>
+
+            <h4 className="font-medium mb-1">Cookie-Einstellungen ändern</h4>
+            <p className="mb-4">
+              Sie können Ihre Cookie-Einstellungen jederzeit ändern. In unserer Cookie-Consent-Box am unteren Bildschirmrand finden Sie 
+              die Option "Einstellungen", wo Sie Ihre Präferenzen anpassen können. Außerdem können Sie Cookies in Ihrem Browser löschen 
+              und die Annahme von Cookies in Ihren Browser-Einstellungen deaktivieren.
             </p>
           </section>
 
@@ -173,6 +204,11 @@ export default function Datenschutz() {
               ausdrückliche Einwilligung für die Datenübermittlung in Drittländer vorliegt oder ein sonstiger Erlaubnistatbestand erfüllt 
               ist, werden wir sicherstellen, dass für die Datenübermittlung in diese Länder angemessene Garantien bestehen. Das können etwa 
               EU-Standarddatenschutzklauseln, anerkannte Verhaltensregeln oder Zertifizierungsmechanismen sein.
+            </p>
+            <p className="mb-4">
+              Bei der Nutzung von Vercel und Brevo werden Daten in die USA oder andere Drittländer übertragen. Die Übermittlung erfolgt 
+              auf Basis des EU-US Data Privacy Framework bzw. entsprechender Angemessenheitsbeschlüsse oder geeigneter Garantien wie 
+              EU-Standarddatenschutzklauseln.
             </p>
           </section>
 

@@ -6,12 +6,17 @@ import { useState } from 'react';
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Function to close the mobile menu
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
       <div className="relative bg-white/70 backdrop-blur border border-white/60 rounded-full px-6 py-3 shadow-lg">
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}
-          <Link href="/" className="flex items-center gap-2 text-[#30b9c9] font-bold text-xl hover:text-[#167080] transition-colors">
+          <Link href="/" className="flex items-center gap-2 text-[#30b9c9] font-bold text-xl hover:text-[#167080] transition-colors" onClick={closeMobileMenu}>
             <Image src="/logo.webp" alt="PflegeBuddy Logo" width={32} height={32} className="w-8 h-8 object-contain" />
             PflegeBuddy
           </Link>
@@ -49,13 +54,13 @@ export default function Navbar() {
           <div className="relative bg-white/10 backdrop-blur border border-white/40 mt-2 rounded-3xl shadow-lg py-4 px-6">
             <div className="flex flex-col space-y-4">
               {/* <Link href="/leistungen" className="text-gray-600 hover:text-[#30b9c9] transition-colors">Leistungen</Link> */}
-              <Link href="/blog" className="text-gray-900 font-semibold hover:text-[#30b9c9] transition-colors">
+              <Link href="/blog" className="text-gray-900 font-semibold hover:text-[#30b9c9] transition-colors" onClick={closeMobileMenu}>
                 Blog
               </Link>
-              <Link href="/ueber-uns" className="text-gray-900 font-semibold hover:text-[#30b9c9] transition-colors">
+              <Link href="/ueber-uns" className="text-gray-900 font-semibold hover:text-[#30b9c9] transition-colors" onClick={closeMobileMenu}>
                 Über uns
               </Link>
-              <Link href="/kontakt" className="text-gray-900 font-semibold hover:text-[#30b9c9] transition-colors">
+              <Link href="/kontakt" className="text-gray-900 font-semibold hover:text-[#30b9c9] transition-colors" onClick={closeMobileMenu}>
                 Kontakt
               </Link>
             </div>

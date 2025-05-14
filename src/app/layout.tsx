@@ -9,7 +9,12 @@ import FeedbackButton from "./components/FeedbackButton";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import CookieConsent from "./components/CookieConsent";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/react";
+import dynamic from "next/dynamic";
+
+// Dynamischer Import für den AnalyticsWrapper, um ihn nur client-seitig zu laden
+const AnalyticsWrapper = dynamic(() => import('./components/AnalyticsWrapper'), {
+  ssr: false // Nur client-seitig ausführen
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -91,19 +96,9 @@ export default function RootLayout({
             ]
           })
         }} />
-        {/* Brevo Tracker */}
-        <Script src="https://cdn.brevo.com/js/sdk-loader.js" async />
-        <Script id="brevo-tracker" strategy="afterInteractive">
-          {`
-            window.Brevo = window.Brevo || [];
-            Brevo.push([
-                "init",
-                {
-                  client_key: "m75l043hj2peifdjjybyxxby"
-                }
-            ]);
-          `}
-        </Script>
+        {/* Brevo script wird geladen, aber erst nach Einwilligung aktiviert */}
+        <Script src="https://cdn.brevo.com/js/sdk-loader.js" strategy="afterInteractive" />
+        {/* Brevo Aktivierungs-Script entfernt - wird jetzt in CookieConsent.tsx gesteuert */}
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {/* Hide on mobile, show from medium screens up */}
@@ -125,7 +120,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
-        <Analytics />
+        {/* Vercel Analytics nur mit Einwilligung aktivieren - der Wrapper prüft die Einwilligung */}
+        <AnalyticsWrapper />
       </body>
     </html>
   );
