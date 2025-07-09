@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Suspense, lazy } from 'react';
 import { FaApple, FaGooglePlay } from 'react-icons/fa';
 
+// Make ThreeSceneClient optional and only load on client
 const ThreeSceneClient = lazy(() => import('./ThreeSceneClient'));
 
 interface Feature {
@@ -38,22 +39,12 @@ export default function HomeContent({ features }: HomeContentProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
           >
-            <motion.h1
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#30b9c9] mb-4 text-center drop-shadow-lg w-full"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
-            >
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#30b9c9] mb-4 text-center drop-shadow-lg w-full">
               Pflegebuddy – Deine digitale Pflegehilfe für zu Hause
-            </motion.h1>
-            <motion.p
-              className="text-base sm:text-lg text-[#e0e6ed] mb-10 text-center w-full tracking-wide"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.7, ease: 'easeOut' }}
-            >
+            </h1>
+            <p className="text-base sm:text-lg text-[#e0e6ed] mb-10 text-center w-full tracking-wide">
               Kostenlos. Persönlich. Entlastend.
-            </motion.p>
+            </p>
             <div className="flex flex-col items-center gap-4 w-full mt-auto">
               <button className="bg-[#30b9c9] hover:bg-[#167080] text-white text-lg px-8 py-3 rounded-xl font-semibold shadow-md transition-all w-full sm:max-w-xs">
                 Jetzt testen
@@ -67,26 +58,35 @@ export default function HomeContent({ features }: HomeContentProps) {
               </div>
             </div>
           </motion.div>
-          {/* Smartphone-Mockup mit Floating-Animation */}
+          {/* Smartphone-Mockup - Fallback für SSR */}
           <div className="w-full flex justify-center md:block">
-            <motion.div
-              className="flex-1 flex justify-center items-center relative z-10 min-h-[220px] sm:min-h-[320px] md:min-h-[360px]"
-              animate={{ y: [0, -16, 0, 16, 0] }}
-              transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-            >
-              <Suspense 
-                fallback={
-                  <div className="text-[#30b9c9] flex items-center justify-center h-full">
-                    <div className="text-center">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#30b9c9] mb-2"></div>
-                      <div>Lade Inhalte...</div>
-                    </div>
-                  </div>
-                }
-              >
-                <ThreeSceneClient />
-              </Suspense>
-            </motion.div>
+            <div className="flex-1 flex justify-center items-center relative z-10 min-h-[220px] sm:min-h-[320px] md:min-h-[360px]">
+              {/* Fallback image for SSR and crawlers */}
+              <div className="block md:hidden lg:block">
+                <Image 
+                  src="/mockup-smartphone.webp" 
+                  alt="Pflegebuddy App Mockup" 
+                  width={300} 
+                  height={400} 
+                  className="mx-auto"
+                  priority
+                />
+              </div>
+              {/* 3D Scene only for interactive users */}
+              <div className="hidden md:block lg:hidden">
+                <Suspense fallback={
+                  <Image 
+                    src="/mockup-smartphone.webp" 
+                    alt="Pflegebuddy App Mockup" 
+                    width={300} 
+                    height={400} 
+                    className="mx-auto"
+                  />
+                }>
+                  <ThreeSceneClient />
+                </Suspense>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -97,17 +97,14 @@ export default function HomeContent({ features }: HomeContentProps) {
           <h2 className="text-3xl font-bold mb-10 text-[#30b9c9]">Hauptfunktionen der Pflegebuddy App</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 px-4 justify-center">
             {features.map((f, i) => (
-              <motion.div
+              <div
                 key={f.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 + i * 0.15 }}
                 className="w-full flex flex-col items-center bg-[#167080]/80 backdrop-blur rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
               >
                 {f.icon}
                 <h3 className="mt-4 text-lg font-semibold text-[#f3f6fa]">{f.title}</h3>
                 <p className="mt-2 text-[#e0e6ed] text-sm">{f.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

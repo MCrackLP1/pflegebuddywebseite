@@ -7,35 +7,46 @@ export default function AdminLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
     
-    // Einfache Authentifizierung - in einer Produktionsumgebung sollte dies 
-    // sicherer implementiert werden, z.B. mit NextAuth oder einer API
-    if (username === 'tim' && password === 'Killingyou11') {
-      // Login erfolgreich
-      localStorage.setItem('admin-auth', 'true');
-      localStorage.setItem('admin-user', 'Tim Werner');
-      router.push('/admin/dashboard');
-    } else {
-      setError('Ungültiger Benutzername oder Passwort');
+    try {
+      // Secure authentication via API route
+      const response = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Login erfolgreich
+        localStorage.setItem('admin-auth', 'true');
+        localStorage.setItem('admin-user', data.user);
+        router.push('/admin/dashboard');
+      } else {
+        setError(data.error || 'Ungültiger Benutzername oder Passwort');
+      }
+    } catch (err) {
+      setError('Netzwerkfehler. Bitte versuche es erneut.');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <main className="min-h-screen bg-[#23243a] pb-16 pt-16">
-      <section className="max-w-md mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 backdrop-blur">
+    <main className="min-h-screen bg-[#23243a] flex items-center justify-center p-8">
+      <div className="max-w-md w-full bg-[#23243a]/90 rounded-3xl shadow-lg p-8 backdrop-blur">
         <h1 className="text-3xl font-bold text-[#30b9c9] mb-6 text-center">Admin Login</h1>
-        
-        {error && (
-          <div className="mb-4 p-3 bg-red-500/20 border border-red-500 rounded-md text-red-200">
-            {error}
-          </div>
-        )}
-        
-        <form onSubmit={handleLogin} className="space-y-6">
+        <form onSubmit={handleLogin} className="space-y-4">
           <div>
             <label htmlFor="username" className="block text-[#f3f6fa] mb-2">
               Benutzername
@@ -49,7 +60,6 @@ export default function AdminLogin() {
               required
             />
           </div>
-          
           <div>
             <label htmlFor="password" className="block text-[#f3f6fa] mb-2">
               Passwort
@@ -63,15 +73,23 @@ export default function AdminLogin() {
               required
             />
           </div>
-          
+          {error && (
+            <div className="bg-red-500/20 border border-red-500 rounded-lg p-3 text-red-200">
+              {error}
+            </div>
+          )}
           <button
             type="submit"
-            className="w-full px-4 py-2 text-[#1a1b2e] bg-[#30b9c9] rounded-md hover:bg-[#27a0af] transition-colors font-medium"
+            disabled={loading}
+            className="w-full bg-[#30b9c9] text-white py-2 px-4 rounded-md font-semibold hover:bg-[#167080] transition disabled:opacity-50"
           >
-            Anmelden
+            {loading ? 'Anmelden...' : 'Anmelden'}
           </button>
         </form>
-      </section>
+        <div className="mt-6 text-center text-[#f3f6fa]/70 text-sm">
+          <p>⚠️ Dieser Bereich ist nur für autorisierte Benutzer zugänglich.</p>
+        </div>
+      </div>
     </main>
   );
 } 

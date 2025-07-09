@@ -22,7 +22,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://plegebuddy.care'),
+  metadataBase: new URL('https://www.pflegebuddy.app'),
   title: {
     default: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     template: "%s | Pflegebuddy"
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr. Persönlich, digital, kostenlos.",
-    url: "https://plegebuddy.care/",
+    url: "https://www.pflegebuddy.app/",
     siteName: "Pflegebuddy",
     images: [
       {
@@ -75,19 +75,21 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="Pflegebuddy Blog" href="/blog/rss.xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.ico" sizes="any" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
         <Script id="structured-data" type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Pflegebuddy",
-            "url": "https://plegebuddy.care",
-            "logo": "https://plegebuddy.care/logo.webp",
+            "url": "https://www.pflegebuddy.app",
+            "logo": "https://www.pflegebuddy.app/logo.webp",
             "description": "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz und mehr.",
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "",
+              "telephone": "0174 1632129",
               "contactType": "customer service",
-              "email": "info@plegebuddy.care"
+              "email": "deinpflegebuddy@gmail.com"
             },
             "sameAs": [
               "https://www.facebook.com/pflegebuddy",
@@ -99,6 +101,12 @@ export default function RootLayout({
         {/* Brevo script wird geladen, aber erst nach Einwilligung aktiviert */}
         <Script src="https://cdn.brevo.com/js/sdk-loader.js" strategy="afterInteractive" />
         {/* Brevo Aktivierungs-Script entfernt - wird jetzt in CookieConsent.tsx gesteuert */}
+        <noscript>
+          <style>{`
+            .no-js-content { display: block !important; }
+            .js-only { display: none !important; }
+          `}</style>
+        </noscript>
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {/* Hide on mobile, show from medium screens up */}

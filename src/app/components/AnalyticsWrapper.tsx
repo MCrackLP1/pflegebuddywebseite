@@ -28,7 +28,7 @@ export default function AnalyticsWrapper() {
           }
         }
       } catch (e) {
-        console.error('Fehler beim Prüfen der Analytics-Einstellungen:', e);
+        // Fehler beim Prüfen der Analytics-Einstellungen
         setAnalyticsEnabled(false);
       }
     };

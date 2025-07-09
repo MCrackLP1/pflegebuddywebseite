@@ -1,17 +1,17 @@
+import type { Metadata } from "next";
 import { FaRegFileAlt, FaRegLightbulb, FaRegChartBar, FaRegComments, FaRegCalendarAlt, FaWifi } from "react-icons/fa";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 // import Footer from "./components/Footer"; // Remove Footer import
-import dynamic from 'next/dynamic';
-// import HomeContent from './components/HomeContent'; // Remove direct import
+import HomeContent from './components/HomeContent'; // ← Direct import with SSR
 import PflegeQuiz from './components/PflegeQuiz';
 import FAQAccordion from './components/FAQAccordion';
 import Script from 'next/script';
 
-// Dynamically import HomeContent without SSR
-const HomeContent = dynamic(() => import('./components/HomeContent'), { 
-  ssr: false,
-  loading: () => <div className="min-h-screen flex items-center justify-center"><p>Lade Inhalte...</p></div> // Optional loading state
-});
+// Remove the dynamic import that disabled SSR
+// const HomeContent = dynamic(() => import('./components/HomeContent'), { 
+//   ssr: false,
+//   loading: () => <div className="min-h-screen flex items-center justify-center"><p>Lade Inhalte...</p></div>
+// });
 
 const features = [
   {
@@ -68,8 +68,8 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Pflegebuddy',
-    url: 'https://plegebuddy.care',
-    logo: 'https://plegebuddy.care/logo.webp',
+    url: 'https://www.pflegebuddy.app',
+    logo: 'https://www.pflegebuddy.app/logo.webp',
     sameAs: [
       'https://www.facebook.com/pflegebuddy',
       'https://www.instagram.com/pflegebuddy.app',
@@ -77,9 +77,9 @@ export default function Home() {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '',
+      telephone: '0174 1632129',
       contactType: 'customer service',
-      email: 'info@plegebuddy.care'
+      email: 'deinpflegebuddy@gmail.com'
     }
   };
 
@@ -159,17 +159,17 @@ export default function Home() {
   );
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
   description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz, Pflegewissen, Notfallmanagement und mehr. Persönlich, digital, kostenlos.",
   keywords: ["Pflege", "digitale Pflegehilfe", "Pflegeberatung", "Pflegewissen", "Notfallmanagement", "Service-Marktplatz", "Experten-Chat"],
   alternates: {
-    canonical: "https://plegebuddy.care/",
+    canonical: "https://www.pflegebuddy.app/",
   },
   openGraph: {
     title: "Pflegebuddy – Deine digitale Pflegehilfe für zu Hause",
     description: "Pflegebuddy unterstützt dich im Pflegealltag: Kalender, Experten-Chat, Service-Marktplatz, Pflegewissen, Notfallmanagement und mehr. Persönlich, digital, kostenlos.",
-    url: "https://plegebuddy.care/",
+    url: "https://www.pflegebuddy.app/",
     siteName: "Pflegebuddy",
     images: [
       {

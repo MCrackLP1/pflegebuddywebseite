@@ -9,6 +9,20 @@ type ConsentSettings = {
   marketing: boolean;  // Für Brevo Tracker
 };
 
+// Check if user agent suggests a crawler/bot
+const isBot = () => {
+  if (typeof window === 'undefined') return true;
+  
+  const userAgent = window.navigator.userAgent.toLowerCase();
+  const botPatterns = [
+    'googlebot', 'bingbot', 'slurp', 'crawler', 'spider', 'bot',
+    'facebookexternalhit', 'twitterbot', 'linkedinbot', 'whatsapp',
+    'telegrambot', 'applebot', 'baiduspider', 'yandexbot'
+  ];
+  
+  return botPatterns.some(pattern => userAgent.includes(pattern));
+};
+
 const CookieConsent = () => {
   const [showConsent, setShowConsent] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
@@ -19,6 +33,11 @@ const CookieConsent = () => {
   });
 
   useEffect(() => {
+    // Don't show consent banner for bots/crawlers
+    if (isBot()) {
+      return;
+    }
+
     // Prüfe, ob der Benutzer bereits zugestimmt hat
     const consent = localStorage.getItem('cookie-consent');
     if (!consent) {
@@ -109,7 +128,8 @@ const CookieConsent = () => {
     setShowConsent(false);
   };
 
-  if (!showConsent) return null;
+  // Don't render anything for bots or when consent is not needed
+  if (!showConsent || isBot()) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#1a1b2e] border-t border-[#30b9c9]/30 p-4 md:p-6 backdrop-blur-sm">
@@ -211,6 +231,8 @@ export default CookieConsent;
 // Erweitern der globalen Window-Schnittstelle
 declare global {
   interface Window {
-    Brevo?: any;
+    Brevo?: {
+      push: (args: any[]) => void;
+    };
   }
 } 

@@ -1,8 +1,12 @@
-# robots.txt für pflegebuddy.care
+# robots.txt für pflegebuddy.app
 User-agent: *
 Allow: /
-Sitemap: https://pflegebuddy.care/sitemap.xml
-Sitemap: https://pflegebuddy.care/blog/sitemap.xml
+Sitemap: https://www.pflegebuddy.app/sitemap.xml
+Sitemap: https://www.pflegebuddy.app/blog/sitemap.xml
+
+# Alternative Domain
+Sitemap: https://plegebuddy.care/sitemap.xml
+Sitemap: https://plegebuddy.care/blog/sitemap.xml
 
 # Gruppenspezifische Regeln
 User-agent: Googlebot

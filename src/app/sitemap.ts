@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { blogPosts } from './blog/blogPosts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://pflegebuddy.care';
+  const baseUrl = 'https://www.pflegebuddy.app';
   
   // Hauptseiten der Website
   const mainPages = [

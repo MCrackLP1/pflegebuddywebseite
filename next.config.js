@@ -26,7 +26,7 @@ const nextConfig = {
           },
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
+            value: 'SAMEORIGIN',
           },
           {
             key: 'X-XSS-Protection',
@@ -35,6 +35,27 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.brevo.com https://vercel.live https://cdn.vercel-insights.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: https: blob:",
+              "font-src 'self' data:",
+              "connect-src 'self' https://vitals.vercel-insights.com https://api.brevo.com",
+              "frame-src 'self' https://www.brevo.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "frame-ancestors 'self'",
+              "block-all-mixed-content"
+            ].join('; '),
           },
         ],
       },
@@ -58,10 +79,11 @@ const nextConfig = {
       },
     ];
   },
-}
+  experimental: {
+    optimizePackageImports: ['framer-motion', 'react-icons'],
+  },
+  swcMinify: true,
+  poweredByHeader: false,
+};
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
-
-module.exports = withBundleAnalyzer(nextConfig)
+module.exports = nextConfig;
