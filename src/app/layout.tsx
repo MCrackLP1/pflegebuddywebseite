@@ -76,7 +76,14 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.ico" sizes="any" />
         <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="revisit-after" content="7 days" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Pflegebuddy" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@pflegebuddy" />
         <Script id="structured-data" type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
