@@ -75,6 +75,56 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="Pflegebuddy Blog" href="/blog/rss.xml" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.ico" sizes="any" />
+        
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="X_Huj2yd7jxZnYG-7QZ1l0DZGv7gr2k0XC13EEkq-wo" />
+        
+        {/* Preconnect hints for critical external services */}
+        <link rel="preconnect" href="https://js.brevo.com" />
+        <link rel="preconnect" href="https://vitals.vercel-insights.com" />
+        <link rel="preconnect" href="https://cdn.vercel-insights.com" />
+        <link rel="preconnect" href="https://api.brevo.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        
+        {/* Priority resource hints */}
+        <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/Headersectionbg.webp" as="image" type="image/webp" />
+        
+        {/* Critical CSS inline for faster initial render */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical CSS for initial render */
+            *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+            body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;line-height:1.5;color:#1f2937;background-color:#fff}
+            .fixed{position:fixed}
+            .relative{position:relative}
+            .top-4{top:1rem}
+            .left-1\\/2{left:50%}
+            .-translate-x-1\\/2{transform:translateX(-50%)}
+            .z-50{z-index:50}
+            .w-\\[90\\%\\]{width:90%}
+            .max-w-5xl{max-width:64rem}
+            .bg-white\\/70{background-color:rgb(255 255 255 / 0.7)}
+            .backdrop-blur{backdrop-filter:blur(8px)}
+            .border{border-width:1px}
+            .border-white\\/60{border-color:rgb(255 255 255 / 0.6)}
+            .rounded-full{border-radius:9999px}
+            .px-6{padding-left:1.5rem;padding-right:1.5rem}
+            .py-3{padding-top:0.75rem;padding-bottom:0.75rem}
+            .shadow-lg{box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1),0 4px 6px -4px rgb(0 0 0 / 0.1)}
+            .flex{display:flex}
+            .items-center{align-items:center}
+            .justify-between{justify-content:space-between}
+            .text-\\[\\#30b9c9\\]{color:#30b9c9}
+            .font-bold{font-weight:700}
+            .text-xl{font-size:1.25rem;line-height:1.75rem}
+            .min-h-screen{min-height:100vh}
+            .bg-\\[\\#23243a\\]{background-color:#23243a}
+            .text-\\[\\#f3f6fa\\]{color:#f3f6fa}
+          `
+        }} />
+        
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="bingbot" content="index, follow" />
