@@ -2,11 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Suspense, lazy } from 'react';
 import { FaApple, FaGooglePlay } from 'react-icons/fa';
-
-// Make ThreeSceneClient optional and only load on client
-const ThreeSceneClient = lazy(() => import('./ThreeSceneClient'));
 
 interface Feature {
   icon: React.ReactNode;
@@ -140,14 +136,47 @@ export default function HomeContent({ features }: HomeContentProps) {
         </div>
       </section>
 
-      {/* 3D Scene (Non-blocking) */}
-      <Suspense fallback={
-        <div className="h-96 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-500">Lade interaktive 3D-Szene...</div>
+      {/* App Showcase Section */}
+      <section className="py-16 md:py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="text-center"
+          >
+            <motion.h2 
+              variants={fadeInUp}
+              className="text-3xl md:text-4xl font-bold text-gray-900 mb-8"
+            >
+              Die Pflegebuddy App
+            </motion.h2>
+            
+            <motion.div 
+              variants={fadeInUp}
+              className="flex justify-center"
+            >
+              <Image 
+                src="/mockup-smartphone.webp" 
+                alt="Pflegebuddy App Mockup" 
+                width={300} 
+                height={600} 
+                className="max-w-full h-auto"
+                priority
+                quality={90}
+              />
+            </motion.div>
+            
+            <motion.p 
+              variants={fadeInUp}
+              className="text-lg md:text-xl text-gray-600 mt-8 max-w-3xl mx-auto"
+            >
+              Kostenlos verfügbar für iOS und Android. Einfach herunterladen und sofort loslegen.
+            </motion.p>
+          </motion.div>
         </div>
-      }>
-        <ThreeSceneClient />
-      </Suspense>
+      </section>
     </>
   );
 } 
