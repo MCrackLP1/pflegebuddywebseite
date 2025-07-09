@@ -3,6 +3,19 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Modern JavaScript target - no polyfills for modern browsers
+  transpilePackages: [],
+  experimental: {
+    optimizePackageImports: ['framer-motion', 'react-icons'],
+    optimizeCss: true,
+    gzipSize: true,
+  },
+  // Enable modern bundling
+  compiler: {
+    removeConsole: {
+      exclude: ['error'],
+    },
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -18,20 +31,7 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   compress: true,
-  // Performance optimizations
-  compiler: {
-    removeConsole: {
-      exclude: ['error'],
-    },
-  },
-  // Static optimization
   trailingSlash: false,
-  // Edge runtime for faster responses
-  experimental: {
-    optimizePackageImports: ['framer-motion', 'react-icons'],
-    optimizeCss: true,
-    gzipSize: true,
-  },
   // Caching headers
   async headers() {
     return [

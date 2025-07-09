@@ -1,0 +1,19 @@
+# Modern browsers that support ES6+ natively
+# This eliminates the need for polyfills
+
+> 0.25% and last 2 versions
+not dead
+not ie 11
+not op_mini all
+not android 4.4.3
+not chrome < 63
+not firefox < 58
+not safari < 10.1
+not ios_saf < 10.3
+
+# Focus on modern browsers that support ES6+ features
+supports es6-module
+supports es6-module-dynamic-import
+supports array-flat
+supports object-values
+supports object-entries 
