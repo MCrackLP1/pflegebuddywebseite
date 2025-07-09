@@ -1,6 +1,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { ErrorBoundary } from 'react-error-boundary';
+import Image from 'next/image';
 
 const ThreeScene = dynamic(() => import('./ThreeComponents'), {
   ssr: false,
@@ -14,6 +16,27 @@ const ThreeScene = dynamic(() => import('./ThreeComponents'), {
   )
 });
 
+function FallbackComponent() {
+  return (
+    <div className="flex items-center justify-center h-96 bg-gray-50">
+      <div className="text-center">
+        <Image 
+          src="/mockup-smartphone.webp" 
+          alt="Pflegebuddy App Mockup" 
+          width={200} 
+          height={400} 
+          className="mx-auto mb-4"
+        />
+        <p className="text-gray-600">3D-Modell wird geladen...</p>
+      </div>
+    </div>
+  );
+}
+
 export default function ThreeSceneClient() {
-  return <ThreeScene />;
+  return (
+    <ErrorBoundary FallbackComponent={FallbackComponent}>
+      <ThreeScene />
+    </ErrorBoundary>
+  );
 } 

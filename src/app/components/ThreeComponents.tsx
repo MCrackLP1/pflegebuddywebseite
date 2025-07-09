@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useGLTF, Environment } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 import { useEffect, useRef, Suspense } from 'react';
 import * as THREE from 'three';
 
@@ -60,9 +60,21 @@ export default function ThreeScene() {
         preserveDrawingBuffer: true,
         powerPreference: "high-performance",
       }}
-      dpr={[1, 3]}
+      dpr={[1, 2]}
     >
-      <Suspense fallback={<Fallback />}><ambientLight intensity={0.3} /><spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1.2} castShadow /><pointLight position={[-10, -10, -10]} intensity={0.3} /><Model /><Environment preset="city" background={false} blur={0.4} /></Suspense>
+      <Suspense fallback={<Fallback />}>
+        {/* Simple lighting setup instead of Environment to avoid HDR loading issues */}
+        <ambientLight intensity={0.4} />
+        <directionalLight 
+          position={[10, 10, 10]} 
+          intensity={1.5} 
+          castShadow 
+          shadow-mapSize={[1024, 1024]}
+        />
+        <pointLight position={[-10, -10, -10]} intensity={0.3} />
+        <hemisphereLight intensity={0.2} />
+        <Model />
+      </Suspense>
     </Canvas>
   );
 } 
