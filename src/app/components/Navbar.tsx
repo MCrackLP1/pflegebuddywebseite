@@ -42,16 +42,16 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50" role="banner">
       <nav
         aria-label="Hauptnavigation"
-        className="bg-white/80 backdrop-blur border-b border-white/60"
+        className="bg-[#23243a]/95 backdrop-blur border-b border-[#30b9c9]/20 shadow"
       >
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 py-3 min-h-[56px] flex items-center justify-between">
           {/* Logo/Brand */}
           <Link
             href="/"
-            className="flex items-center gap-2 text-[#30b9c9] font-bold text-xl hover:text-[#167080] transition-colors"
+            className="flex items-center gap-2 text-[#f3f6fa] font-bold text-xl hover:text-[#30b9c9] transition-colors"
             aria-label="Startseite"
           >
             <Image
@@ -73,8 +73,8 @@ export default function Navbar() {
                 href={href}
                 className={`font-semibold transition-colors ${
                   isActive(href)
-                    ? "text-[#167080]"
-                    : "text-gray-900 hover:text-[#30b9c9]"
+                    ? "text-[#30b9c9]"
+                    : "text-[#f3f6fa] hover:text-[#30b9c9]"
                 }`}
               >
                 {label}
@@ -93,7 +93,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen((v) => !v)}
-            className="md:hidden text-gray-900 hover:text-[#30b9c9]"
+            className="md:hidden text-[#f3f6fa] hover:text-[#30b9c9]"
             aria-label="Menü öffnen"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -120,7 +120,7 @@ export default function Navbar() {
           />
           <div
             id="mobile-menu"
-            className="fixed top-[56px] left-0 right-0 z-[70] bg-white border-b border-gray-200 shadow-md md:hidden"
+            className="fixed top-[56px] left-0 right-0 z-[70] bg-[#23243a] border-b border-white/10 shadow-md md:hidden"
             role="dialog"
             aria-modal="true"
           >
@@ -129,7 +129,7 @@ export default function Navbar() {
                 <Link
                   key={href}
                   href={href}
-                  className="text-gray-900 font-semibold hover:text-[#30b9c9] transition-colors"
+                  className="text-[#f3f6fa] font-semibold hover:text-[#30b9c9] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {label}
