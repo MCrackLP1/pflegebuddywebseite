@@ -65,8 +65,8 @@ export default function Navbar() {
             PflegeBuddy
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          {/* Navigation */}
+          <div className="flex items-center gap-6">
             {navigationLinks.map(({ href, label }) => (
               <Link
                 key={href}
@@ -90,7 +90,7 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (kept for small widths, but won't hide nav) */}
           <button
             onClick={() => setIsMobileMenuOpen((v) => !v)}
             className="md:hidden text-[#f3f6fa] hover:text-[#30b9c9]"
