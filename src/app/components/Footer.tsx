@@ -6,35 +6,26 @@ import { FaApple, FaGooglePlay, FaInstagram, FaFacebook, FaLinkedin } from "reac
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#23243a] border-t border-[#30b9c9]/20 mt-10 text-sm text-[#f3f6fa]">
-      {/* Top CTA inside footer */}
-      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <Image src="/logo.webp" alt="PflegeBuddy Logo" width={28} height={28} className="rounded" />
-          <div className="font-semibold">PflegeBuddy – Deine App für den Pflegealltag</div>
-        </div>
-        <div className="flex items-center gap-3">
-          <a href="#" aria-label="Apple App Store (bald verfügbar)" className="inline-flex items-center gap-2 rounded-full bg-[#30b9c9] hover:bg-[#167080] text-white px-4 py-2 transition"><FaApple /> App Store</a>
-          <a href="https://pflegebuddy.carrd.co" target="_blank" rel="noopener noreferrer" aria-label="Google Play Store" className="inline-flex items-center gap-2 rounded-full bg-[#30b9c9] hover:bg-[#167080] text-white px-4 py-2 transition"><FaGooglePlay /> Google Play</a>
-        </div>
-      </div>
-
-      <div className="px-6 py-10 bg-[#23243a]/95">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-[#23243a] border-top border-[#30b9c9]/20 mt-10 text-sm text-[#f3f6fa]">
+      <div className="max-w-6xl mx-auto px-6 py-6">
+        <div className="flex flex-wrap items-start justify-between gap-6">
           {/* Brand */}
-          <div>
+          <div className="min-w-[220px] flex-1">
             <div className="flex items-center gap-2">
-              <Image src="/logo.webp" alt="PflegeBuddy Logo" width={32} height={32} />
-              <span className="text-lg font-bold text-[#f3f6fa]">PflegeBuddy</span>
+              <Image src="/logo.webp" alt="PflegeBuddy Logo" width={28} height={28} />
+              <span className="text-base font-bold">PflegeBuddy</span>
             </div>
-            <p className="mt-3 text-[#f3f6fa]/90">Deine App für den Pflegealltag – persönlich & digital.</p>
-            <p className="mt-2 text-[#f3f6fa]/80">Mark Tietz & Tim Werner</p>
+            <p className="mt-2 text-[#f3f6fa]/80">Deine App für den Pflegealltag – persönlich & digital.</p>
+            <div className="mt-3 flex gap-2">
+              <a href="#" aria-label="Apple App Store (bald verfügbar)" className="inline-flex items-center gap-2 rounded-full bg-[#30b9c9] hover:bg-[#167080] text-white px-3 py-1.5 transition"><FaApple /> App</a>
+              <a href="https://pflegebuddy.carrd.co" target="_blank" rel="noopener noreferrer" aria-label="Google Play Store" className="inline-flex items-center gap-2 rounded-full bg-[#30b9c9] hover:bg-[#167080] text-white px-3 py-1.5 transition"><FaGooglePlay /> Play</a>
+            </div>
           </div>
 
           {/* Navigation */}
-          <nav aria-label="Footer Navigation">
+          <nav aria-label="Footer Navigation" className="min-w-[180px]">
             <h2 className="font-semibold text-[#30b9c9]">Navigation</h2>
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-2 space-y-1">
               <li><Link href="/ueber-uns" className="hover:text-[#30b9c9] transition">Über uns</Link></li>
               <li><Link href="/blog" className="hover:text-[#30b9c9] transition">Blog</Link></li>
               <li><Link href="/#faq" className="hover:text-[#30b9c9] transition">FAQ</Link></li>
@@ -43,9 +34,9 @@ export default function Footer() {
           </nav>
 
           {/* Rechtliches */}
-          <nav aria-label="Rechtliches">
+          <nav aria-label="Rechtliches" className="min-w-[180px]">
             <h2 className="font-semibold text-[#30b9c9]">Rechtliches</h2>
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-2 space-y-1">
               <li><Link href="/datenschutz" className="hover:text-[#30b9c9] transition">Datenschutz</Link></li>
               <li><Link href="/impressum" className="hover:text-[#30b9c9] transition">Impressum</Link></li>
               <li><Link href="/haftungsausschluss" className="hover:text-[#30b9c9] transition">Haftungsausschluss</Link></li>
@@ -54,30 +45,27 @@ export default function Footer() {
           </nav>
 
           {/* Kontakt & Social */}
-          <div>
+          <div className="min-w-[220px] flex-1">
             <h2 className="font-semibold text-[#30b9c9]">Kontakt</h2>
-            <div className="mt-3 space-y-1">
+            <div className="mt-2 space-y-1">
               <a href="tel:01741632129" className="hover:text-[#30b9c9] transition">0174 1632129</a>
               <div>
                 <a href="mailto:deinpflegebuddy@gmail.com" className="hover:text-[#30b9c9] transition">deinpflegebuddy@gmail.com</a>
               </div>
               <div>Königplatz 3, Waltenhofen</div>
             </div>
-            <div className="mt-4">
-              <h3 className="font-semibold text-[#30b9c9]">Folge uns</h3>
-              <div className="flex gap-3 mt-2 text-[#f3f6fa]">
-                <a href="https://www.instagram.com/pflege.buddy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-[#30b9c9] transition"><FaInstagram size={22} /></a>
-                <a href="https://www.facebook.com/pflegebuddy" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-[#30b9c9] transition"><FaFacebook size={22} /></a>
-                <a href="https://www.linkedin.com/company/pflegebuddy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#30b9c9] transition"><FaLinkedin size={22} /></a>
-              </div>
+            <div className="mt-3 flex gap-3 text-[#f3f6fa]">
+              <a href="https://www.instagram.com/pflege.buddy/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-[#30b9c9] transition"><FaInstagram size={20} /></a>
+              <a href="https://www.facebook.com/pflegebuddy" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-[#30b9c9] transition"><FaFacebook size={20} /></a>
+              <a href="https://www.linkedin.com/company/pflegebuddy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[#30b9c9] transition"><FaLinkedin size={20} /></a>
             </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="max-w-6xl mx-auto mt-10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-[#f3f6fa]/70">
+        {/* Bottom bar (compact) */}
+        <div className="mt-6 border-t border-white/10 pt-3 text-xs text-[#f3f6fa]/70 flex flex-wrap items-center justify-between gap-3">
           <div>© {year} PflegeBuddy. Alle Rechte vorbehalten.</div>
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             <Link href="/datenschutz" className="hover:text-[#30b9c9] transition">Datenschutz</Link>
             <Link href="/impressum" className="hover:text-[#30b9c9] transition">Impressum</Link>
             <Link href="/haftungsausschluss" className="hover:text-[#30b9c9] transition">Haftungsausschluss</Link>
