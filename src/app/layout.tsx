@@ -222,6 +222,12 @@ export default function RootLayout({
         </noscript>
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-[#30b9c9] focus:text-white focus:px-3 focus:py-2 focus:rounded"
+        >
+          Zum Inhalt springen
+        </a>
         {/* Hide on mobile, show from medium screens up */}
         <div className="hidden md:block">
           <AnimatedBackground />
@@ -236,7 +242,7 @@ export default function RootLayout({
           <FeedbackButton />
         </div>
         <ScrollToTopButton />
-        <main>
+        <main id="main-content" className="pt-16">
           {children}
         </main>
         <Footer />

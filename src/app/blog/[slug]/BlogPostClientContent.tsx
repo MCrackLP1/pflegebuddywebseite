@@ -16,7 +16,7 @@ interface BlogPostClientContentProps {
 export default function BlogPostClientContent({ post, related, shareUrl, shareText, readingTime }: BlogPostClientContentProps) {
   return (
     <>
-      <article className="max-w-3xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-16 backdrop-blur">
+      <article className="max-w-3xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-8 backdrop-blur">
         <h1 className="text-3xl font-bold mb-4 text-[#30b9c9]">{post.title}</h1>
         <div className="flex flex-wrap gap-2 mb-4">
           {post.categories.map((cat) => (

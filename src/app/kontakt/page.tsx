@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Kontakt() {
   return (
     <main className="min-h-screen bg-[#23243a] pb-16">
-      <section className="max-w-3xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-16 backdrop-blur">
+      <section className="max-w-3xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-8 backdrop-blur">
         <KontaktForm />
       </section>
     </main>

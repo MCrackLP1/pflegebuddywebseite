@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export default function UeberUns() {
   return (
     <main className="min-h-screen bg-[#23243a] pb-16">
-      <section className="max-w-3xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-16 backdrop-blur">
+      <section className="max-w-3xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-8 backdrop-blur">
         <h1 className="text-3xl font-bold text-[#30b9c9] mb-6">Über uns</h1>
         <div className="flex flex-col sm:flex-row gap-8 items-center mb-8">
           <div className="flex-shrink-0">

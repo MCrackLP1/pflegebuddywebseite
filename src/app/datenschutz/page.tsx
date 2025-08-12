@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export default function Datenschutz() {
   return (
     <main className="min-h-screen bg-[#23243a] pb-16">
-      <section className="max-w-4xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-16 backdrop-blur">
+      <section className="max-w-4xl mx-auto bg-[#23243a]/90 rounded-3xl shadow-lg p-8 mt-8 backdrop-blur">
         <h1 className="text-3xl font-bold text-[#30b9c9] mb-6">Datenschutzerklärung</h1>
         
         <div className="space-y-6 text-[#f3f6fa]">
